@@ -4,19 +4,15 @@
 
 <br />
 <div align="center">
-  <a href="https://github.com/zyx-0314/">
-  <a href="https://github.com/zyx-0314/">
-  <a href="https://github.com/zyx-0314/">
-  <a href="https://github.com/zyx-0314/">
-  <a href="https://github.com/zyx-0314/">
-    <img src="./assets/img/LogoVolunkey.png" alt="Nyebe" width="130" height="100">
+  <a href="https://github.com/Seanmojica17">
+    <img src="./assets/img/LogoVolunkey.png" alt="Volunkey" width="130" height="100">
   </a>
 
   <h3 align="center">Volunkey</h3>
 </div>
 
 <div align="center">
-  The goal is to connect volunteers with opportunities to positively impact communities through coordinated events and initiatives.
+  "The goal is to connect volunteers with opportunities to positively impact communities through coordinated events and initiatives."
 </div>
 
 <br />
@@ -41,15 +37,6 @@
         <li>
           <a href="#AboutUs">About Us</a>
         </li>
-      </ol>
-    </li>
-    <li>
-      <a href="#rule,-practices-and-principles">Rules, Practices and Principles</a>
-    </li>
-    <li>
-      <a href="#resources">Resources</a>
-    </li>
-  </ol>
 </details>
 
 ---
