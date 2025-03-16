@@ -46,16 +46,25 @@
 
 Description of the project in details.
 
-Guiding Question:
 - What is the project
+  The project is a volunteer management tool made to help people find volunteer opportunities, social projects, and community events in their area.  Users can apply for events, submit volunteer activities, and keep track of their activity through the app.  In order to enhance subsequent events, organizers can verify candidates, maintain event listings, and get input from the community.
+
 - Whats the purpose
-- What are key components
-- What technology used and how it is used
+  By offering a platform that simplifies volunteer organizing, this software aims to support and activate communities.  By matching volunteers with the opportunities that most require them, it seeks to motivate action, advance diversity, and cultivate meaningful community involvement.  The software contributes to the development of more robust and active communities by providing an easy-to-use interface with tools for volunteer monitoring, event booking, and feedback.
+
+
+
 
 ### Key Components
-- MultiPage Website/Single Page Website
-- Parallax transition
-- Transactional
+- MultiPage Website
+- Home Page
+- About Us
+- Services
+- Hover Transition
+- Volunteer Opportunity Listings
+- Community Engagement and Feedback
+- Events Scheduling and Management 
+- Progress Tracking and Reporting
 
 ### Technology
 ![HTML](https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white)
@@ -89,5 +98,14 @@ WD-ProjectName
 ## Resources
 | Title | Purpose | Link |
 |-|-|-|
-| Github | Template | https://github.com/FEU-TECH-Advance-Web-Design-Ramirez/AWD-Template-Project.git |
+| Github | Get some ideas| https://github.com/FEU-TECH-Advance-Web-Design-Ramirez/AWD-Template-Project.git |
+| Youtube | Get some ideas| https://www.youtube.com/ |
+| Google | Get some ideas| https://www.google.com/webhp?hl=en&sa=X&ved=0ahUKEwjvoq-Bi4-MAxVMg1YBHTW_DMgQPAgI |
+| Tiktok | Get some ideas| https://www.tiktok.com/ |
+| Chatgpt | Get some ideas| https://chatgpt.com/ |
+| Figma | Get some ideas| https://www.figma.com/ |
+| Canva | Get some ideas| https://www.canva.com/en_ph/ |
+| Pinterest | Get some ideas| https://www.pinterest.com/ |
+| Google Fonts | Get some ideas| https://fonts.google.com/ |
+| Tailwind | Get some ideas| https://tailwindcss.com/ |
 
