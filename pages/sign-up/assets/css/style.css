@@ -15,24 +15,24 @@
 
 header {
     background: rgba(255, 255, 255);
-    padding: 15px 40px;
+  
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
     opacity: 100%;
     padding-right: 10rem;
-    padding-left: 5rem;
+    padding-left: 7rem;
     border-bottom: 2px solid rgb(204, 204, 204);
+    border-style: solid;
+
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height:6vh;
-    padding-left: 3rem;
-    padding-right: 3rem;
+
 }
 
 .logo_resize {
@@ -103,6 +103,8 @@ body {
     padding: 20px;
     border-radius: 10px; /* Optional: Adds rounded corners */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+    position: absolute;
+    right: 10%;
 }
 
 
