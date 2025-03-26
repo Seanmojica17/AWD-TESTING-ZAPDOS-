@@ -1,0 +1,514 @@
+@import url('https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,100..900;1,100..900&family=Arimo:ital,wght@0,400..700;1,400..700&family=Expletus+Sans:ital,wght@0,400..700;1,400..700&family=M+PLUS+1+Code:wght@100..700&family=Orbitron:wght@400..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Staatliches&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,100..900;1,100..900&family=Arimo:ital,wght@0,400..700;1,400..700&family=Expletus+Sans:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=M+PLUS+1+Code:wght@100..700&family=Orbitron:wght@400..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Staatliches&display=swap');
+
+
+
+/* styles.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Source Sans 3", sans-serif;
+}
+
+/* -----------------HEADER--------------------- */
+
+header {
+    background: rgba(255, 255, 255);
+    position: relative;
+    top: 0;
+    z-index: 1000;
+    opacity: 100%;
+    border-bottom: 2px solid rgb(233, 233, 233); /* Adjust thickness and color */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    max-width: 100vw;
+    padding: 0 5rem; /* Increased padding on left and right */
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.logo {
+    padding: 0;
+    margin: 0;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.logo_resize {
+    width: 5rem;
+}
+
+.navigations {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 1rem;
+    gap: 1.5rem; /* Adds spacing between items */
+}
+
+.navigations a {
+    text-decoration: none;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    color: black;
+    position: relative;
+    transition: transform 0.2s ease-in-out;
+}
+
+.header_right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: auto;
+}
+
+.navigations span { /* Targeting the vertical line */
+    color: black; 
+  }
+
+/* Add hover effect */
+.navigations a:hover {
+    transform: scale(1.1);
+}
+
+.navigations a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.navigations a:hover::after {
+    transform: scaleX(1);
+}
+
+/* Keep underline for active link */
+.navigations a.active::after {
+    transform: scaleX(1);
+}
+
+
+/* -----------------SECTION 1--------------------- */
+
+.section1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section1 h2 {
+    font-size: 3.5rem;
+    font-family: inter;
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    text-align: center;
+    color: #003087;
+    max-width: 1500px;
+}
+
+
+/* -----------------SECTION 2--------------------- */
+
+.section2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    width: 100%;
+    height: 120vh;
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+
+.container_section2 {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    align-items: center;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    width: 100%;
+    height: 100vh;
+    padding: 2rem;
+}
+
+.card_container_section2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    width: 35%;
+    height: 100%;
+    background-color: rgb(250, 250, 250);
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Hover effect */
+.card_container_section2:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.card_container_section2 h2 {
+    font-size: 3rem;
+    font-family: inter;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    text-align: start;
+    color: #003087;
+    width: 100%;
+}
+
+.card_container_section2 p {
+    font-size: 2.5rem;
+    font-family: inter;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    text-align: start;
+    font-weight: 600;
+    max-width: 500px;
+}
+
+.button_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    margin-top: .5rem;
+    width: 100%;
+    padding-left: 2rem;
+    padding-bottom: 3rem;
+}
+
+.button_section1 {
+    background-color: #001C64;
+    border-radius: 18px;
+    padding: 0.5rem 1rem;
+    font-family: inter;
+    transition: all 0.3s ease-in-out;
+    transform: scale(1);
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.button_section1:hover {
+    background-color: #0033A0; /* Slightly lighter blue on hover */
+    transform: scale(1.1); /* Slightly enlarges the button */
+    box-shadow: 0 4px 10px rgba(0, 28, 100, 0.3); /* Adds shadow effect */
+}
+
+.button_section1 a{
+    text-decoration: none;
+    color: white;
+    font-weight: 300;
+}
+
+
+/* -----------------FOOTER--------------------- */
+
+footer {
+    background: #ffffff;
+    position: relative;
+    width: 100%;
+    height: 40vh;
+    bottom: 0;
+    z-index: 1000;
+    opacity: 100%;
+    border-top: 2px solid rgb(233, 233, 233); /* Adjust thickness and color */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top: none;
+}
+
+.footer_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer_content h2 {
+    font-size: 1.3rem;
+    font-family: inter;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.footer_content p {
+    font-size: 1.5rem;
+    font-family: inter;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+.footer_content span {
+    color: #003087;
+}
+
+.footer_icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.footer_icons img {
+    width: 60px;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+.line {
+    height: 0.5vh;
+    width: 100%;
+    border-bottom: 2px solid black;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+}
+
+
+
+
+
+
+
+
+/* -----------------Media Query--------------------- */
+
+@media screen and (max-width: 1440px) {
+    header {
+        padding-right: 5rem;
+        padding-left: 5rem;
+    }
+
+    .section2 {
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        height: auto;
+    }
+
+    .container_section2 {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+        height: auto;
+        gap: 2rem;
+    }
+
+    .card_container_section2 {
+        width: 40%;
+        height: auto;
+        padding: 2rem;
+        margin: 1rem;
+        text-align: center;
+    }
+
+    .card_container_section2 h2 {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .card_container_section2 p {
+        font-size: 1.8rem;
+        text-align: center;
+        max-width: 90%;
+    }
+
+    .button_container {
+        justify-content: center;
+        padding-left: 0;
+        padding-bottom: 2rem;
+    }
+
+    .button_section1 {
+        padding: 0.7rem 2rem;
+        font-size: 1.2rem;
+        border-radius: 14px;
+    }
+}
+
+
+
+
+
+
+@media screen and (max-width: 375px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+        width: 100%;
+        box-sizing: border-box;
+        gap: 1rem;
+    }
+
+    .logo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .logo_resize {
+        width: 60px; /* Maintain aspect ratio */
+        height: auto;
+    }
+
+    .header_right img {
+        display: none; /* Hide the person icon */
+    }
+
+    .header_right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; /* Center horizontally */
+        text-align: center;
+        width: 100%;
+        gap: 0.5rem;
+    }
+
+    .header_right .navigations {
+        display: flex;
+        flex-direction: row; /* Display Log In and Sign Up in a row */
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 1rem; /* Add space between links */
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .section1_content h2 {
+        font-size: 2rem;
+    }
+
+    .section1_content p {
+        font-size: 1rem;
+    }
+
+    .section1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .section1 h2 {
+        font-size: 1.5rem;
+        font-family: inter;
+        margin-top: 5rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+        text-align: center;
+        color: #003087;
+        max-width: 1500px;
+    }
+
+
+
+
+
+
+    .section2 {
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        height: auto;
+    }
+
+    .container_section2 {
+        flex-direction: column;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 1rem;
+        height: auto;
+    }
+
+    .card_container_section2 {
+        width: 90%;
+        height: auto;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .card_container_section2 h2 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .card_container_section2 p {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .button_container {
+        justify-content: center;
+        padding-left: 0;
+        padding-bottom: 1rem;
+    }
+
+    .button_section1 {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+        border-radius: 12px;
+    }
+
+
+
+
+
+
+
+
+
+
+    .footer_content h2 {
+        font-size: 0.8rem;
+    }
+
+    .footer_content p {
+        font-size: 0.7rem;
+    }
+
+    .footer_icons img{
+        width: 2rem;
+    }
+}

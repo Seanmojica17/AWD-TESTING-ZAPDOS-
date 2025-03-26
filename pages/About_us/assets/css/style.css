@@ -1,0 +1,523 @@
+@import url('https://fonts.googleapis.com/css2?family=Anybody:wght@100..900&family=Arimo:wght@400..700&family=Expletus+Sans:wght@400..700&family=M+PLUS+1+Code:wght@100..700&family=Orbitron:wght@400..900&family=Source+Sans+3:wght@200..900&family=Staatliches&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Source Sans 3", sans-serif;
+}
+
+.hero-1 {
+    position: relative;
+    width: 100%;
+    height: 100dvh; /* Adjust as needed */
+    overflow: hidden;
+}
+
+.hero-1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Pushes image to the background */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10; /* Ensures text is in front */
+    color: white; /* Adjust for readability */
+    text-align: left;
+    padding: 50px;
+    color: rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.774);
+    margin-right: 25%;
+    margin-left: 10%;
+    margin-top: 5%;
+    border-radius: 15%;
+    padding-left: 5%;
+    padding-right: 10%;
+    height: auto;
+  
+
+}
+
+
+.hero-content h1{
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+h1 span{
+    color: rgba(0, 0, 254, 1);
+    font-size: larger;
+}
+
+p1,p2,p3{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+
+p1 span{
+    color: rgba(13, 217, 108, 1);
+    font-weight: bold;
+}
+
+p2 span{
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+p3 span{
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+
+
+.right{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+ 
+}
+
+.right img{
+    margin-bottom: -0.5rem;
+}
+
+.hero-2{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    justify-content: space-around;
+}
+
+.hero-2 h1{
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    padding-right: 20rem;
+    color: rgba(0, 0, 254, 1);
+    text-align: left;
+    margin-left: 10rem;
+
+}
+.hero-2 h2{
+   
+    font-size: 8rem;
+    font-weight: 700;
+    margin-right: 15rem;
+    font-style: italic;
+    color: rgba(0, 0, 254, 1);
+
+
+
+}
+
+
+.hero-3{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background: linear-gradient(to right, 
+            rgba(0, 0, 254, 1),
+            rgba(82, 139, 253, 1)
+
+          );
+   padding-top: 10%;
+   padding-bottom: 10%;
+}
+
+.hero-3 h2{
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    text-align: left;
+    margin-right: 15rem;
+    padding-left: 15rem;
+
+
+}
+.hero-3 h1{
+   
+    font-size: 8rem;
+    font-weight: 700;
+    margin-right: 15rem;
+    font-style: italic;
+    color: rgb(255, 255, 255);
+    margin-left: 12rem;
+
+
+
+}
+.underline-green{
+    display: flex;
+    width: 27rem;
+    border-bottom: 25px solid rgba(13, 217, 108, 1);
+    margin-top: -2.5rem;
+}
+
+.hero-3 span{
+    display: flex;
+    width: 27rem;
+    border-bottom: 25px solid rgba(13, 217, 108, 1);
+    margin-top: -2.5rem;
+    margin-left:10rem ;
+}
+
+
+  
+
+@media only screen and (max-width: 750px) and (max-height: 1334px) {
+
+    .hero-1 {
+        position: relative;
+        width: 100%;
+        height: 70dvh; /* Adjust as needed */
+        overflow: hidden;
+    }
+    
+    .hero-1 img {
+        width: 100%;
+        height: 70dvh;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1; /* Pushes image to the background */
+        
+    }
+    
+    .hero-content {
+        position: relative;
+        z-index: 10; /* Ensures text is in front */
+        color: white; /* Adjust for readability */
+        text-align: left;
+        padding: 50px;
+        color: rgb(0, 0, 0);
+        background-color: rgba(255, 255, 255, 0.774);
+        margin-right: 25%;
+        margin-left: 10%;
+        margin-top: 30%;
+        border-radius: 15%;
+        padding-left: 5%;
+        padding-right: 10%;
+        height: 40dvh;
+
+      
+    
+    }
+    
+    
+    .hero-content h1{
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+    
+    h1 span{
+        color: rgba(0, 0, 254, 1);
+        font-size: larger;
+    }
+    
+    p1,p2,p3{
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        text-align: center;
+        
+    }
+    
+    
+    p1 span{
+        color: rgba(13, 217, 108, 1);
+        font-weight: bold;
+    }
+    
+    p2 span{
+        color: rgb(0, 0, 0);
+        font-weight: bold;
+    }
+    
+    p3 span{
+        color: rgb(0, 0, 0);
+        font-weight: bold;
+    }
+    
+    
+    
+    .right{
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+     
+    }
+    
+    .right img{
+        margin-bottom: -0.5rem;
+    }
+    
+    .hero-2{
+        display: flex;
+        flex-direction: column;
+        margin-top: 10%;
+        margin-bottom: 10%;
+        justify-content: space-around;
+        width: auto;
+    }
+    
+    .hero-2 h1{
+        font-size: 1rem;
+        font-weight: 700;
+        text-align: center;
+        padding-right: 10rem;
+        color: rgba(0, 0, 254, 1);
+        text-align: left;
+        margin-left: 15rem;
+    
+    }
+    .hero-2 h2{
+       
+        font-size: 4rem;
+        font-weight: 700;
+        margin-right: 15rem;
+        font-style: italic;
+        margin-left: 1rem;
+        color: rgba(0, 0, 254, 1);
+    
+    
+    
+    }
+    
+    
+    .hero-3{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        background: linear-gradient(to right, 
+                rgba(0, 0, 254, 1),
+                rgba(82, 139, 253, 1)
+    
+              );
+       padding-top: 10%;
+       padding-bottom: 10%;
+       width: auto;
+    }
+    
+    .hero-3 h2{
+        font-size: 1rem;
+        font-weight: 700;
+        text-align: center;
+        color: rgb(255, 255, 255);
+        text-align: left;
+        margin-right: 15rem;
+        margin-top: 1rem;
+    
+    
+    }
+    .hero-3 h1{
+
+        font-size: 4rem;
+        font-weight: 700;
+        margin-left: 1rem;
+        font-style: italic;
+        
+        color: rgb(255, 255, 255);
+
+    }
+    .underline-green{
+        display: flex;
+        width: 27rem;
+        border-bottom: 25px solid rgba(13, 217, 108, 1);
+        margin-top: -2.5rem;
+    }
+    
+    .hero-3 span{
+        display: flex;
+        width: 27rem;
+        border-bottom: 25px solid rgba(13, 217, 108, 1);
+        margin-top: -2.5rem;
+        margin-left:0rem ;
+    }
+}
+
+@media only screen and (max-width: 768px) and (max-height: 1024px) {
+
+    .hero-1 {
+        position: relative;
+        width: 100%;
+        height: 70dvh; /* Adjust as needed */
+        overflow: hidden;
+    }
+    
+    .hero-1 img {
+        width: 100%;
+        height: 70dvh;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1; /* Pushes image to the background */
+        
+    }
+    
+    .hero-content {
+        position: relative;
+        z-index: 10; /* Ensures text is in front */
+        color: white; /* Adjust for readability */
+        text-align: left;
+        padding: 50px;
+        color: rgb(0, 0, 0);
+        background-color: rgba(255, 255, 255, 0.774);
+        margin-right: 25%;
+        margin-left: 10%;
+        margin-top: 10%;
+        border-radius: 15%;
+        padding-left: 5%;
+        padding-right: 10%;
+        height: 50dvh;
+
+      
+    
+    }
+    
+    
+    .hero-content h1{
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+    
+    h1 span{
+        color: rgba(0, 0, 254, 1);
+        font-size: larger;
+    }
+    
+    p1,p2,p3{
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        text-align: center;
+        
+    }
+    
+    
+    p1 span{
+        color: rgba(13, 217, 108, 1);
+        font-weight: bold;
+    }
+    
+    p2 span{
+        color: rgb(0, 0, 0);
+        font-weight: bold;
+    }
+    
+    p3 span{
+        color: rgb(0, 0, 0);
+        font-weight: bold;
+    }
+    
+    
+    
+    .right{
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+     
+    }
+    
+    .right img{
+        margin-bottom: -0.5rem;
+    }
+    
+    .hero-2{
+        display: flex;
+        flex-direction: column;
+        margin-top: 10%;
+        margin-bottom: 10%;
+        justify-content: space-around;
+        width: auto;
+    }
+    
+    .hero-2 h1{
+        font-size: 1rem;
+        font-weight: 700;
+        text-align: center;
+        padding-right: 10rem;
+        color: rgba(0, 0, 254, 1);
+        text-align: left;
+        margin-left: 15rem;
+    
+    }
+    .hero-2 h2{
+       
+        font-size: 4rem;
+        font-weight: 700;
+        margin-right: 15rem;
+        font-style: italic;
+        margin-left: 1rem;
+        color: rgba(0, 0, 254, 1);
+    
+    
+    
+    }
+    
+    
+    .hero-3{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        background: linear-gradient(to right, 
+                rgba(0, 0, 254, 1),
+                rgba(82, 139, 253, 1)
+    
+              );
+       padding-top: 10%;
+       padding-bottom: 10%;
+       width: auto;
+    }
+    
+    .hero-3 h2{
+        font-size: 1rem;
+        font-weight: 700;
+        text-align: center;
+        color: rgb(255, 255, 255);
+        text-align: left;
+        margin-right: 15rem;
+        margin-top: 1rem;
+    
+    
+    }
+    .hero-3 h1{
+
+        font-size: 4rem;
+        font-weight: 700;
+        margin-left: 1rem;
+        font-style: italic;
+        
+        color: rgb(255, 255, 255);
+
+    }
+    .underline-green{
+        display: flex;
+        width: 27rem;
+        border-bottom: 25px solid rgba(13, 217, 108, 1);
+        margin-top: -2.5rem;
+    }
+    
+    .hero-3 span{
+        display: flex;
+        width: 27rem;
+        border-bottom: 25px solid rgba(13, 217, 108, 1);
+        margin-top: -2.5rem;
+        margin-left:0rem ;
+    }
+}
