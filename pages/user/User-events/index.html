@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+</head>
+
+
+
+<body>
+
+
+    <!-- Hamburger Menu -->
+    <input type="checkbox" id="menu-toggle" class="menu-toggle" hidden>
+    <label for="menu-toggle" class="menu-icon">☰</label>
+
+    <section class="Main_Nav">
+        <div class="profile">
+            <img src="./assets/img/profile.png">
+            <h1> USERS </h1>
+        </div>
+
+        <div class="navigations">
+            <a href="../User_dashboard/index.html">Dashboard</a>
+            <a href="./index.html" class="active">Events</a>
+            <a href="../User-volunteers/index.html">Volunteers</a>
+            <a href="../User-settings/index.html">Settings</a>
+        </div>
+
+        <div class="logo">
+            <img src="./assets/img/logo.png">
+        </div>
+    </section>
+    
+    <section class="Main_Dashboard">
+        <div class="dashboard">
+            <h1>EVENTS</h1>
+            <hr class="custom-line">
+        </div>
+    
+        <section class="volunteer-list">
+            <div class="volunteer-item"><h2>Events Posted</h2></div>
+            <div class="volunteer-item"><h2>Events Posted</h2></div>
+            <div class="volunteer-item"><h2>Events Posted</h2></div>
+            <div class="volunteer-item"><h2>Events Posted</h2></div>
+            <div class="volunteer-item"><h2>Events Posted</h2></div>
+        </section>
+    </section>
+
+    <section class="event-panel">
+        <div class="event-image">
+            <img src="./assets/img/conference.png" alt="Event Image">
+        </div>
+        <div class="event-details">
+            <h2>Event Posted</h2>
+            <p>Event details:</p>
+            <div class="details-box">
+                <div class="spacing">
+                    <p>Time:</p>
+                    <p>Event date:</p>
+                </div>
+                <div class="spacing">
+                    <p>Description:</p>
+                    <p>Location:</p>
+                </div>
+            </div>
+        </div>
+        <div class="event-register">
+            <h3>Register:</h3>
+            <div class="register-box">
+                <label for="participants">Name of Participants:</label>
+                <textarea id="participants" rows="3"></textarea>
+            </div>
+            <button class="submit-btn">SUBMIT</button>
+        </div>
+    </section>
+    
+    
+    </body>
+    
+</html>
