@@ -1,16 +1,103 @@
 @import url('https://fonts.googleapis.com/css2?family=Anybody:wght@100..900&family=Arimo:wght@400..700&family=Expletus+Sans:wght@400..700&family=M+PLUS+1+Code:wght@100..700&family=Orbitron:wght@400..900&family=Source+Sans+3:wght@200..900&family=Staatliches&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,100..900;1,100..900&family=Arimo:ital,wght@0,400..700;1,400..700&family=Expletus+Sans:ital,wght@0,400..700;1,400..700&family=M+PLUS+1+Code:wght@100..700&family=Orbitron:wght@400..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Staatliches&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,100..900;1,100..900&family=Arimo:ital,wght@0,400..700;1,400..700&family=Expletus+Sans:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=M+PLUS+1+Code:wght@100..700&family=Orbitron:wght@400..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Staatliches&display=swap');
+
+
+/* styles.css */
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: "Source Sans 3", sans-serif;
+
 }
 
+body {
+    background-color: rgba(243, 243, 246, 1);
+}
+
+/* -----------------HEADER--------------------- */
+header {
+    background: rgba(255, 255, 255);
+    position: relative;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid rgb(233, 233, 233);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 100vw;
+    padding: 0 5rem;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.logo {
+    padding: 0;
+    margin: 0;
+    width: auto;
+    display: flex;
+}
+
+.logo_resize {
+    width: 5rem;
+}
+
+.navigations {
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+    gap: 1.5rem;
+}
+
+.navigations a {
+    text-decoration: none;
+    margin: 0 1.5rem;
+    color: black;
+    position: relative;
+    transition: transform 0.2s ease-in-out;
+}
+
+.header_right {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.navigations span {
+    color: black;
+}
+
+/* Add hover effect */
+.navigations a:hover {
+    transform: scale(1.1);
+}
+
+.navigations a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.navigations a:hover::after,
+.navigations a.active::after {
+    transform: scaleX(1);
+}
+
+/* -----------------HERO SECTION--------------------- */
 .hero-1 {
     position: relative;
     width: 100%;
-    height: 100dvh; /* Adjust as needed */
+    height: 100%;
     overflow: hidden;
 }
 
@@ -21,503 +108,636 @@
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -1; /* Pushes image to the background */
+    z-index: -1;
 }
 
 .hero-content {
     position: relative;
-    z-index: 10; /* Ensures text is in front */
-    color: white; /* Adjust for readability */
-    text-align: left;
-    padding: 50px;
-    color: rgb(0, 0, 0);
+    z-index: 10;
     background-color: rgba(255, 255, 255, 0.774);
-    margin-right: 25%;
-    margin-left: 10%;
-    margin-top: 5%;
-    border-radius: 15%;
-    padding-left: 5%;
-    padding-right: 10%;
-    height: auto;
-  
-
+    margin: 7rem 25rem;
+    padding: 50px 10%;
+    border-radius: 5%;
+    box-shadow: 0px 10px 0px 0px rgba(0, 0, 0, 0.329);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: rgb(0, 0, 0);
 }
 
-
-.hero-content h1{
-    font-size: 3rem;
+.hero-content h1 {
+    font-size: 5rem;
     font-weight: 700;
     margin-bottom: 1rem;
     text-align: center;
+    color: rgba(0, 48, 135, 1);
 }
 
-h1 span{
-    color: rgba(0, 0, 254, 1);
-    font-size: larger;
+h1 span {
+    color: rgba(0, 28, 100, 1);
+    margin-right: 1rem;
+    font-size: 5rem;
 }
 
-p1,p2,p3{
+.hero-content p1 {
     font-size: 2rem;
     margin-bottom: 1rem;
-    text-align: center;
-}
-
-
-p1 span{
-    color: rgba(13, 217, 108, 1);
+    text-align: left;
     font-weight: bold;
 }
 
-p2 span{
+/* Paragraph span styles */
+.hero-content p1 span {
+    font-weight: bold;
+}
+
+.hero-content p1 span{
+    color: rgba(0, 48, 135, 1);
+}
+
+.hero-content p1{
     color: rgb(0, 0, 0);
-    font-weight: bold;
 }
 
-p3 span{
-    color: rgb(0, 0, 0);
-    font-weight: bold;
-}
-
-
-
-.right{
+/* Right section */
+.right {
     display: flex;
-    flex-direction: row;
     gap: 2rem;
- 
 }
 
-.right img{
+.right img {
     margin-bottom: -0.5rem;
 }
 
-.hero-2{
+/* -----------------HERO 2--------------------- */
+.hero-2 {
     display: flex;
-    flex-direction: row;
-    margin-top: 10%;
-    margin-bottom: 10%;
     justify-content: space-around;
+    background-color: rgba(243, 243, 246, 1);
+    height: 100%;
+    align-items: center;
+    gap: 10rem;
+    padding-bottom: 10rem;
+    padding-top: 10rem;
 }
 
-.hero-2 h1{
+.hero-2 h1 {
+    font-weight: 500;
     font-size: 3rem;
-    font-weight: 700;
-    text-align: center;
-    padding-right: 20rem;
-    color: rgba(0, 0, 254, 1);
+    margin-left: 15rem;
     text-align: left;
-    margin-left: 10rem;
+    color: black;
 
+    padding-right: 6rem;
 }
-.hero-2 h2{
-   
+
+.hero-2 h2 {
     font-size: 8rem;
     font-weight: 700;
     margin-right: 15rem;
+    margin-left: 1rem;
     font-style: italic;
-    color: rgba(0, 0, 254, 1);
-
-
-
+    color: rgba(0, 28, 100, 1);
+  
 }
 
-
-.hero-3{
+/* -----------------HERO 3--------------------- */
+.hero-3 {
     display: flex;
-    flex-direction: row;
     justify-content: space-around;
-    background: linear-gradient(to right, 
-            rgba(0, 0, 254, 1),
-            rgba(82, 139, 253, 1)
-
-          );
-   padding-top: 10%;
-   padding-bottom: 10%;
+    background-color: white;
+    height: 100%;
+    align-items: center;
+    padding-bottom: 10rem;
+    padding-top: 10rem;
+    gap: 10rem;
 }
 
-.hero-3 h2{
+.hero-3 h1 {
+    font-weight: 500;
     font-size: 3rem;
-    font-weight: 700;
-    text-align: center;
-    color: rgb(255, 255, 255);
+    margin-left: 20rem;
     text-align: left;
-    margin-right: 15rem;
-    padding-left: 15rem;
-
-
+    color: black;
+    padding-right: 15rem;
 }
-.hero-3 h1{
-   
+
+.hero-3 h2 {
     font-size: 8rem;
     font-weight: 700;
-    margin-right: 15rem;
+    margin-left: 15rem;
     font-style: italic;
-    color: rgb(255, 255, 255);
-    margin-left: 12rem;
-
-
-
+    color: rgba(0, 28, 100, 1);
+  
 }
-.underline-green{
+
+
+/*-------------------HERO 4----------------------*/
+
+
+.hero-4 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
     display: flex;
-    width: 27rem;
-    border-bottom: 25px solid rgba(13, 217, 108, 1);
-    margin-top: -2.5rem;
+    justify-content: space-around;
+    flex-direction: row;
+    gap: 5rem;
+    
 }
 
-.hero-3 span{
+.hero-4 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    object-position: 10% 25%;
+}
+
+.hero-4 .left{
     display: flex;
-    width: 27rem;
-    border-bottom: 25px solid rgba(13, 217, 108, 1);
-    margin-top: -2.5rem;
-    margin-left:10rem ;
+    flex-direction: column;
+    font-size: 1.5rem;
+    color: white;
+    align-items: center;
+
+
 }
 
 
+.hero-4 .left-content{
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    margin-left: 5rem;
+    background-color: rgba(0, 28, 100, 1);
+    padding: 5rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    border-radius: 5%;
+    box-shadow: 0px 10px 0px 0px rgba(0, 0, 0, 0.329);
+
+}
+
+.hero-4 p1{
+    font-size: 1.5rem;
+    text-align: left;
+    font-weight: bold;
+
+}
+
+
+.hero-4 .right{
+    display: flex;
+}
+
+.hero-4 .right-content{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+
+   
+}
+
+.hero-4 h1 {
+    color: rgba(0, 48, 135, 1);
+    font-size: 5rem;
+    text-align: left;
+
+
+}
+
+.hero-4 span{
+    color: rgba(0, 28, 100, 1);
+    font-size: 5rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+
+/*-------------------HERO 5----------------------*/
+
+.hero-5 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    padding-right: 5rem;
+    padding-bottom: 5rem;
   
 
-@media only screen and (max-width: 750px) and (max-height: 1334px) {
+    
+}
 
-    .hero-1 {
-        position: relative;
-        width: 100%;
-        height: 70dvh; /* Adjust as needed */
-        overflow: hidden;
+.hero-5 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    object-position: 10% 25%;
+}
+
+.hero-5 .left{
+
+    display: flex;
+    flex-direction: column;
+    font-size: 4rem;
+    color: rgba(0, 48, 135, 1);
+    align-items: center;
+    justify-content: center;
+    margin-left: 10rem;
+    width: 20rem;
+    font-style: italic;
+}
+
+
+
+
+.hero-5 .middle{
+
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+    align-items: left;
+    margin-left: 6rem;
+    margin-top: 12.5rem;
+    margin-right: 5rem;
+ 
+
+}
+
+.hero-5 p1{
+    font-weight: 500;
+}
+
+.hero-5 span{
+   font-style: italic;
+
+}
+
+.hero-5 button{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    background-color: rgba(0, 28, 100, 1);
+    color: white;
+    border-radius: 10%;
+    border-color:rgba(0, 48, 135, 1) ;
+    box-shadow: none;
+}
+
+.hero-5 button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #001C64; /* Same as rgba(0, 28, 100, 1) */
+    color: #FFFFFF;
+    border-radius: 8px; /* Better with px for consistent shape */
+    border: 2px solid #003087; /* Same as rgba(0, 48, 135, 1) */
+    box-shadow: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease;
+}
+
+.hero-5 button:hover {
+    background-color: #00277A; /* Slightly lighter for hover effect */
+    transform: translateY(-2px); /* Subtle lift on hover */
+}
+
+.button1{
+    display: flex;
+    align-self: center;
+}
+
+/*-------------------footer----------------------*/
+
+footer {
+    background: #ffffff;
+    position: relative;
+    width: 100%;
+    height: 40vh;
+    bottom: 0;
+    z-index: 1000;
+    opacity: 100%;
+    border-top: 2px solid rgb(233, 233, 233); /* Adjust thickness and color */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer_content h2 {
+    font-size: 1.3rem;
+    font-family: inter;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.footer_content p {
+    font-size: 1.5rem;
+    font-family: inter;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+.footer_content span {
+    color: #003087;
+}
+
+.footer_icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.footer_icons img {
+    width: 60px;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+.line {
+    height: 0.5vh;
+    width: 100%;
+    border-bottom: 2px solid black;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+}
+
+/* -----------------MEDIA QUERIES--------------------- */
+
+/* -----------------MEDIA QUERIES--------------------- */
+
+/* iPhones (portrait and landscape) */
+@media only screen and (max-width: 768px) {
+    header {
+        padding: 0 1.5rem;
+        flex-direction: column;
     }
-    
-    .hero-1 img {
-        width: 100%;
-        height: 70dvh;
-        object-fit: cover;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1; /* Pushes image to the background */
-        
-    }
-    
+
     .hero-content {
-        position: relative;
-        z-index: 10; /* Ensures text is in front */
-        color: white; /* Adjust for readability */
-        text-align: left;
-        padding: 50px;
-        color: rgb(0, 0, 0);
-        background-color: rgba(255, 255, 255, 0.774);
-        margin-right: 25%;
-        margin-left: 10%;
-        margin-top: 30%;
-        border-radius: 15%;
-        padding-left: 5%;
-        padding-right: 10%;
-        height: 40dvh;
-
-      
-    
+        margin-left: 1.5rem ;
+        margin-right: 1rem;
+        margin-top: 2rem;
+        padding: 30px 5%;
+        width: 90%;
     }
     
-    
-    .hero-content h1{
-        font-size: 2rem;
-        font-weight: 700;
-        margin-bottom: 1rem;
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+        width: 100%;
+        box-sizing: border-box;
+        gap: 1rem;
+    }
+
+    .logo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         text-align: center;
     }
-    
-    h1 span{
-        color: rgba(0, 0, 254, 1);
-        font-size: larger;
+
+    .logo_resize {
+        width: 60px; 
+        height: auto;
     }
-    
-    p1,p2,p3{
+
+    .header_right img {
+        display: none; 
+    }
+
+    .header_right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; 
+        text-align: center;
+        width: 100%;
+        gap: 0.5rem;
+    }
+
+    .header_right .navigations {
+        display: flex;
+        flex-direction: row; 
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 1rem; 
+    }
+
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content span{
+        font-size: 2.5rem;
+    }
+
+    .hero-content p1 {
         font-size: 1.5rem;
-        margin-bottom: 1rem;
-        text-align: center;
-        
     }
-    
-    
-    p1 span{
-        color: rgba(13, 217, 108, 1);
-        font-weight: bold;
-    }
-    
-    p2 span{
-        color: rgb(0, 0, 0);
-        font-weight: bold;
-    }
-    
-    p3 span{
-        color: rgb(0, 0, 0);
-        font-weight: bold;
-    }
-    
-    
-    
-    .right{
-        display: flex;
-        flex-direction: row;
+
+    .hero-2, .hero-3 {
+        flex-direction: column;
         gap: 2rem;
-     
+        height: auto;
+        padding: 2rem;
     }
-    
-    .right img{
-        margin-bottom: -0.5rem;
-    }
-    
+
     .hero-2{
-        display: flex;
-        flex-direction: column;
-        margin-top: 10%;
-        margin-bottom: 10%;
-        justify-content: space-around;
-        width: auto;
+        flex-direction: column-reverse
     }
-    
-    .hero-2 h1{
-        font-size: 1rem;
-        font-weight: 700;
+    .hero-2 h1, .hero-3 h1 {
+        margin-left: 0;
+        font-size: 2rem;
+        padding-right: 0;
         text-align: center;
-        padding-right: 10rem;
-        color: rgba(0, 0, 254, 1);
-        text-align: left;
-        margin-left: 15rem;
-    
     }
-    .hero-2 h2{
-       
+
+    .hero-2 h2, .hero-3 h2 {
+        margin: 0;
         font-size: 4rem;
-        font-weight: 700;
-        margin-right: 15rem;
-        font-style: italic;
-        margin-left: 1rem;
-        color: rgba(0, 0, 254, 1);
-    
-    
-    
-    }
-    
-    
-    .hero-3{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        background: linear-gradient(to right, 
-                rgba(0, 0, 254, 1),
-                rgba(82, 139, 253, 1)
-    
-              );
-       padding-top: 10%;
-       padding-bottom: 10%;
-       width: auto;
-    }
-    
-    .hero-3 h2{
-        font-size: 1rem;
-        font-weight: 700;
         text-align: center;
-        color: rgb(255, 255, 255);
-        text-align: left;
-        margin-right: 15rem;
+    }
+
+    .hero-4 {
+        flex-direction: column-reverse;
+        gap: 2rem;
+        padding: 2rem;
+  
+    }
+
+    .hero-4 h1{
+    font-size: 3rem;
+
+    }
+
+    .hero-4 span{
+        font-size: 3rem;
+        }
+
+    
+
+    .hero-4 img{
+       filter:brightness(50%);
+    
+    }
+
+
+    .hero-4 .left-content, .hero-4 .right-content {
+        margin: 0;
+        padding: 1rem;
+        width: 100%;
+    }
+
+    .hero-5 {
+        flex-direction: column;
+        gap: 2rem;
+        height: auto;
+        padding: 2rem;
+    }
+
+    .hero-5 .left {
+        font-size: 2rem;
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .hero-5 .middle {
+        margin-left: 0;
+        width: 100%;
+        margin-top: 2rem;
+    }
+
+    .hero-5 h1{
+        font-size: 5rem;
+    }
+
+    .hero-5 img{
+        filter:brightness(50%);
+    }
+    footer {
+        height: auto;
+        padding: 2rem 0;
+    }
+
+    .footer_content h2, .footer_content p {
+        text-align: center;
+    }
+
+    .footer_icons {
         margin-top: 1rem;
-    
-    
-    }
-    .hero-3 h1{
-
-        font-size: 4rem;
-        font-weight: 700;
-        margin-left: 1rem;
-        font-style: italic;
-        
-        color: rgb(255, 255, 255);
-
-    }
-    .underline-green{
-        display: flex;
-        width: 27rem;
-        border-bottom: 25px solid rgba(13, 217, 108, 1);
-        margin-top: -2.5rem;
-    }
-    
-    .hero-3 span{
-        display: flex;
-        width: 27rem;
-        border-bottom: 25px solid rgba(13, 217, 108, 1);
-        margin-top: -2.5rem;
-        margin-left:0rem ;
     }
 }
 
-@media only screen and (max-width: 768px) and (max-height: 1024px) {
+/* Tablets (portrait and landscape) */
+@media only screen and (max-width: 1024px) and (min-width: 769px) {
+    header {
+        padding: 0 3rem;
+    }
 
-    .hero-1 {
-        position: relative;
-        width: 100%;
-        height: 70dvh; /* Adjust as needed */
-        overflow: hidden;
-    }
-    
-    .hero-1 img {
-        width: 100%;
-        height: 70dvh;
-        object-fit: cover;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1; /* Pushes image to the background */
-        
-    }
-    
     .hero-content {
-        position: relative;
-        z-index: 10; /* Ensures text is in front */
-        color: white; /* Adjust for readability */
-        text-align: left;
-        padding: 50px;
-        color: rgb(0, 0, 0);
-        background-color: rgba(255, 255, 255, 0.774);
-        margin-right: 25%;
-        margin-left: 10%;
-        margin-top: 10%;
-        border-radius: 15%;
-        padding-left: 5%;
-        padding-right: 10%;
-        height: 50dvh;
+        margin: 5rem 10rem;
+        padding: 40px 8%;
+        width: 80%;
+    }
 
-      
-    
+    .hero-content h1 {
+        font-size: 4rem;
     }
-    
-    
-    .hero-content h1{
-        font-size: 2rem;
-        font-weight: 700;
-        margin-bottom: 1rem;
-        text-align: center;
+
+    .hero-content span{
+        font-size: 4rem;
     }
-    
-    h1 span{
-        color: rgba(0, 0, 254, 1);
-        font-size: larger;
+
+    .hero-content p1 {
+        font-size: 1.8rem;
     }
-    
-    p1,p2,p3{
-        font-size: 1.5rem;
-        margin-bottom: 1rem;
-        text-align: center;
-        
+
+    .hero-2, .hero-3 {
+        gap: 5rem;
     }
-    
-    
-    p1 span{
-        color: rgba(13, 217, 108, 1);
-        font-weight: bold;
-    }
-    
-    p2 span{
-        color: rgb(0, 0, 0);
-        font-weight: bold;
-    }
-    
-    p3 span{
-        color: rgb(0, 0, 0);
-        font-weight: bold;
-    }
-    
-    
-    
-    .right{
-        display: flex;
-        flex-direction: row;
-        gap: 2rem;
-     
-    }
-    
-    .right img{
-        margin-bottom: -0.5rem;
-    }
-    
+
     .hero-2{
         display: flex;
-        flex-direction: column;
-        margin-top: 10%;
-        margin-bottom: 10%;
-        justify-content: space-around;
-        width: auto;
+        flex-direction: row-reverse;
     }
-    
-    .hero-2 h1{
-        font-size: 1rem;
-        font-weight: 700;
-        text-align: center;
-        padding-right: 10rem;
-        color: rgba(0, 0, 254, 1);
-        text-align: left;
-        margin-left: 15rem;
-    
+    .hero-2 h1, .hero-3 h1 {
+        font-size: 2.5rem;
     }
-    .hero-2 h2{
-       
-        font-size: 4rem;
-        font-weight: 700;
-        margin-right: 15rem;
-        font-style: italic;
-        margin-left: 1rem;
-        color: rgba(0, 0, 254, 1);
-    
-    
-    
-    }
-    
-    
-    .hero-3{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        background: linear-gradient(to right, 
-                rgba(0, 0, 254, 1),
-                rgba(82, 139, 253, 1)
-    
-              );
-       padding-top: 10%;
-       padding-bottom: 10%;
-       width: auto;
-    }
-    
-    .hero-3 h2{
-        font-size: 1rem;
-        font-weight: 700;
-        text-align: center;
-        color: rgb(255, 255, 255);
-        text-align: left;
-        margin-right: 15rem;
-        margin-top: 1rem;
-    
-    
-    }
-    .hero-3 h1{
 
-        font-size: 4rem;
-        font-weight: 700;
-        margin-left: 1rem;
-        font-style: italic;
-        
-        color: rgb(255, 255, 255);
+    .hero-2 h2, .hero-3 h2 {
+        font-size: 6rem;
+    }
 
-    }
-    .underline-green{
-        display: flex;
-        width: 27rem;
-        border-bottom: 25px solid rgba(13, 217, 108, 1);
-        margin-top: -2.5rem;
-    }
     
-    .hero-3 span{
-        display: flex;
-        width: 27rem;
-        border-bottom: 25px solid rgba(13, 217, 108, 1);
-        margin-top: -2.5rem;
-        margin-left:0rem ;
+
+    .hero-4 .left-content, .hero-4 .right-content {
+        margin-top: 3rem;
+        padding: 3rem;
+        width: 90%;
+    }
+
+    .hero-5 .left {
+        font-size: 3rem;
+        width: 50%;
+    }
+
+    .hero-5 .middle {
+        margin-top: 5rem;
+        width: 70%;
+    }
+}
+
+/* Larger screens (Macs, etc.) */
+@media only screen and (min-width: 1025px) {
+    .hero-content {
+        margin: 7rem 25rem;
+        padding: 50px 10%;
+        width: 60%;
+    }
+
+    .hero-2, .hero-3 {
+        gap: 10rem;
+    }
+
+    .hero-4 .left-content, .hero-4 .right-content {
+        width: 80%;
+    }
+
+    .hero-5 .left {
+        font-size: 4rem;
+    }
+
+    .hero-5 .middle {
+        width: 40%;
     }
 }
