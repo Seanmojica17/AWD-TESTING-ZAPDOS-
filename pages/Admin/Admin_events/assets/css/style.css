@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Anybody:wght@100..900&family=Arimo:wght@400..700&family=Expletus+Sans:wght@400..700&family=M+PLUS+1+Code:wght@100..700&family=Orbitron:wght@400..900&family=Source+Sans+3:wght@200..900&family=Staatliches&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,100..900;1,100..900&family=Arimo:ital,wght@0,400..700;1,400..700&family=Expletus+Sans:ital,wght@0,400..700;1,400..700&family=M+PLUS+1+Code:wght@100..700&family=Orbitron:wght@400..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Staatliches&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,100..900;1,100..900&family=Arimo:ital,wght@0,400..700;1,400..700&family=Expletus+Sans:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=M+PLUS+1+Code:wght@100..700&family=Orbitron:wght@400..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Staatliches&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Source Sans 3", sans-serif;
+   
+}
+
+/* NAVIGATIONS */
+
+.Main_Nav{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 28, 100, 1);
+    align-items: center;
+    width: 15%;
+    height: 97%;
+    position: fixed;
+    margin: 1rem;
+    justify-content: space-around;
+    border-radius: 30px;
+    margin-bottom: 1rem;
+    
+
+
+}
+
+.profile{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    
+}
+
+.profile img{
+  margin-left: 0.5rem;
+}
+
+.profile h1{
+    color: white;
+    font-size: 1.5rem;
+    margin-top: 20px;
+    align-self: center;
+    font-weight: 500;
+}
+
+.navigations{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 10rem;
+    justify-content: space-evenly;
+    height: 100%;
+}
+
+.navigations a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 10px 4rem;
+    border-radius: 30px; /* Rounded corners for initial state */
+    background-color: transparent;
+    border: 2px solid transparent;
+    transition: 0.3s ease;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.navigations a:hover {
+    background-color: white;
+    color: rgba(0, 28, 100, 1);
+    border: 2px solid white;
+    border-radius: 30px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.navigations .active{
+    background-color: white;
+    color: rgba(0, 28, 100, 1);
+    border: 2px solid white;
+    border-radius: 30px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+
+
+.logo{
+    display: flex;
+    margin-bottom:1rem ;
+
+  
+   
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex; /* Flex for side-by-side layout */
+    height: 100vh; /* Full height to fill the screen */
+}
+
+/* Main_Nav stays the same, no changes */
+.Main_Nav {
+    width: 15%; /* Sidebar width */
+    height: 95%;
+    position: fixed;
+    left: 1rem; /* Margin to stay away from edges */
+    top: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 30px;
+}
+
+/* Main_Dashboard updates to fit beside the nav */
+.Main_Notification{
+    margin-left: 17%; /* Push content beside the nav */
+    width: 60%;
+    padding: 20px;
+    overflow-y: auto;
+    height: 100vh; /* Full height */
+    box-sizing: border-box;
+    margin-top: 2rem;
+}
+
+/* Dashboard title styling */
+.notification h1 {
+    margin-top: 0;
+    color: rgba(0, 28, 100, 1);
+    font-size: 3rem;
+}
+
+
+
+.vertical-line {
+    width: 80%; /* Thickness of the line */
+    height: 2px; /* Full height */
+    background-color: rgba(0, 28, 100, 1); /* Line color */
+    position: absolute;
+    top: 10;
+    margin-left: 3rem;
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+.tab-container {
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+    border-radius: 15px;
+    padding: 10px 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    margin: 20px auto;
+}
+
+.tab {
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab.active {
+    font-weight: bold;
+    color: #1a3d7c;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 5px solid #1a3d7c;
+}
+.tab:hover{
+  border-style: solid;
+  color: #1a3d7c;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+}
+
+.tab.active::after {
+    border-style: solid;
+    color: #1a3d7c;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+}
+
+
+
