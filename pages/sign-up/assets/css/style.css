@@ -157,7 +157,7 @@ input[placeholder] {
     padding-top: 1rem;
 }
 
-.signup-btn {
+#signup-btn {
     background-color: #00D44F; /* Green color */
     color: white;
     font-size: 16px;
@@ -169,7 +169,7 @@ input[placeholder] {
     display: inline-block;
 }
 
-.signup-btn:hover {
+#signup-btn:hover {
     background-color: #00b83d; /* Darker green on hover */
 }
 

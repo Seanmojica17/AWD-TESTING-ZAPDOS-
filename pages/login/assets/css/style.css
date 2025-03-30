@@ -186,6 +186,24 @@ input[placeholder] {
     padding-top: 1rem;
 }
 
+#login-btn{
+    background-color: #ffffff;
+    color: #001C64;
+    font-size: 16px;
+    font-weight: 400;
+    border-style: solid;
+    border-color: #001C64;
+    padding: 10px 100px;
+    border-radius: 7px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+#login-btn:hover {
+    background-color: #1e43a0;
+    color: #ffffff;
+}
+
 .signup-btn_2 {
     background-color: #ffffff;
     color: #001C64;
