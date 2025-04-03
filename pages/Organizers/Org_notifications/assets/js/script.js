@@ -25,17 +25,25 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-function logout() {
-    // Clear the admin data from localStorage
-    localStorage.removeItem("user_data");
-  
+// 🎯 Logout Function
+function logoutUser() {
+    // ✅ Clear stored user data
+    localStorage.removeItem("user_email");
+    localStorage.removeItem("user_role");
 
-    // Redirect to the login page
-    window.location.href = "../../../../../index.html";
+    // ✅ Redirect to login page
+    window.location.href = "../../login/index.html";
 }
 
-// Example: Adding a logout button to trigger the logout function
-const logoutButton = document.getElementById('logout-btn');
-if (logoutButton) {
-    logoutButton.addEventListener('click', logout);
-}
+// 🎯 Attach Logout Event Listener
+document.addEventListener("DOMContentLoaded", () => {
+    const logoutBtn = document.getElementById("logout-btn");
+
+    if (logoutBtn) {
+        logoutBtn.addEventListener("click", (event) => {
+            event.preventDefault(); // Prevent default link action
+            logoutUser();
+        });
+    }
+});
+
