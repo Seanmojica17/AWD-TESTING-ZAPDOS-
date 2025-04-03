@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+</head>
+
+<body>
+
+
+
+<section class="Main_Nav">
+
+<div class="profile">
+    <img src="./assets/img/profile.png" >
+    <h1> Welcome Orgname  </h1>
+</div>
+
+
+<div class="navigations">
+    <a href="../Org_dashboard/index.html" >Dashboard</a>
+    <a href="../Org_events/index.html">Events</a>
+    <a href="../Org_volunteers/index.html"  class="active" >Volunteers</a>
+    <a href="../Org_notifications/index.html"  >Notification</a>
+    <a href="#" id="logout-btn">Logout</a> <!-- 🆕 Logout Button -->
+</div>
+
+<div class="logo">
+    <img src="./assets/img/logo.png" >
+</div>
+
+
+
+
+</section>
+
+
+
+
+<section class="Main_applications">
+
+        <div class="applications">
+            <h1>APPLICATIONS</h1>
+            <hr class="custom-line">
+        </div>
+
+        <div class="container">
+    <!-- Verified and Denied Counters -->
+    <div class="counters">
+        <div class="counter-box">Verified: <span id="verifiedCount">0</span></div>
+        <div class="counter-box">Denied: <span id="deniedCount">0</span></div>
+    </div>
+
+    <!-- Application List -->
+    <div class="app-container">
+        <div class="app-row">
+            <div class="user-info">
+                <div class="avatar"></div>
+                <div class="user-text">
+                    <p><strong>Name</strong></p>
+                    <p>Age</p>
+                    <p>Applied Event</p>
+                    <p>Application Date</p>
+                </div>
+            </div>
+            <div class="actions">
+                <button class="approve-btn" onclick="incrementVerified()">✔️</button>
+                <button class="deny-btn" onclick="incrementDenied()">❌</button>
+            </div>
+        </div>
+
+        <!-- Duplicate rows for multiple applications -->
+        <div class="app-row">
+            <div class="user-info">
+                <div class="avatar"></div>
+                <div class="user-text">
+                    <p><strong>Name</strong></p>
+                    <p>Age</p>
+                    <p>Applied Event</p>
+                    <p>Application Date</p>
+                </div>
+            </div>
+            <div class="actions">
+                <button class="approve-btn" onclick="incrementVerified()">✔️</button>
+                <button class="deny-btn" onclick="incrementDenied()">❌</button>
+            </div>
+        </div>
+
+        <div class="app-row">
+            <div class="user-info">
+                <div class="avatar"></div>
+                <div class="user-text">
+                    <p><strong>Name</strong></p>
+                    <p>Age</p>
+                    <p>Applied Event</p>
+                    <p>Application Date</p>
+                </div>
+            </div>
+            <div class="actions">
+                <button class="approve-btn" onclick="incrementVerified()">✔️</button>
+                <button class="deny-btn" onclick="incrementDenied()">❌</button>
+            </div>
+        </div>
+
+        <div class="app-row">
+            <div class="user-info">
+                <div class="avatar"></div>
+                <div class="user-text">
+                    <p><strong>Name</strong></p>
+                    <p>Age</p>
+                    <p>Applied Event</p>
+                    <p>Application Date</p>
+                </div>
+            </div>
+            <div class="actions">
+                <button class="approve-btn" onclick="incrementVerified()">✔️</button>
+                <button class="deny-btn" onclick="incrementDenied()">❌</button>
+            </div>
+        </div>
+
+        <div class="app-row">
+            <div class="user-info">
+                <div class="avatar"></div>
+                <div class="user-text">
+                    <p><strong>Name</strong></p>
+                    <p>Age</p>
+                    <p>Applied Event</p>
+                    <p>Application Date</p>
+                </div>
+            </div>
+            <div class="actions">
+                <button class="approve-btn" onclick="incrementVerified()">✔️</button>
+                <button class="deny-btn" onclick="incrementDenied()">❌</button>
+            </div>
+        </div>
+    </div>
+    </div>
+    </section>
+
+    <section class="right-side">
+
+        <div class="profile-container">
+            <!-- User Profile Section -->
+            <div class="profile-header">
+                <div class="avatar"></div>
+                <h2>Name</h2>
+                <p class="status">Pending</p>
+            </div>
+        
+            <!-- Information Grid -->
+            <div class="info-grid">
+                <div class="info-item">
+                    <p><strong>Location</strong></p>
+                </div>
+                <div class="info-item">
+                    <p><strong>Email Address</strong></p>
+                </div>
+                <div class="info-item">
+                    <p><strong>Application date</strong></p>
+                </div>
+                <div class="info-item">
+                    <p><strong>Skills & Interests</strong></p>
+                </div>
+                <div class="info-item">
+                    <p><strong>Applied Event</strong></p>
+                </div>
+                <div class="info-item">
+                    <p><strong>Availability</strong></p>
+                </div>
+            </div>
+        
+            <!-- Volunteer Experience -->
+            <div class="volunteer-experience">
+                <p><strong>Volunteer Experience</strong></p>
+            </div>
+        
+            <!-- Action Buttons -->
+            <div class="action-buttons">
+                <button class="verify" onclick="verify()">✔️ Verify</button>
+                <button class="deny" onclick="deny()">❌ Deny</button>
+            </div>
+        </div>
+        
+    
+         <script src="../Org_volunteers/assets/js/script.js"></script>
+       
+        
+    </section>
+    </div>
+</div>
+
+      
+
+
+</body>
