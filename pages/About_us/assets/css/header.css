@@ -312,3 +312,23 @@
         background-color: rgba(9, 90, 180, 1);
     }
   }
+
+
+
+  @media only screen and (max-width: 1440px) {
+    .hero-content h1 { font-size: 2.5rem; }
+    .hero-content p { font-size: 1.2rem; }
+    .navigations a { font-size: 1.1rem; }
+}
+
+@media only screen and (max-width: 1024px) {
+    .hero-content h1 { font-size: 2rem; }
+    .hero-content p { font-size: 1rem; }
+    .navigations { display: flex; flex-direction: column; }
+}
+
+@media only screen and (max-width: 375px) {
+    .hero-content h1 { font-size: 1.5rem; }
+    .hero-content p { font-size: 0.9rem; }
+    .navigations { flex-direction: column; align-items: center; }
+}
