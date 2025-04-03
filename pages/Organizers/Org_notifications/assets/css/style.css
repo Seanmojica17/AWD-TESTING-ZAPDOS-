@@ -1,0 +1,633 @@
+@import url('https://fonts.googleapis.com/css2?family=Anybody:wght@100..900&family=Arimo:wght@400..700&family=Expletus+Sans:wght@400..700&family=M+PLUS+1+Code:wght@100..700&family=Orbitron:wght@400..900&family=Source+Sans+3:wght@200..900&family=Staatliches&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,100..900;1,100..900&family=Arimo:ital,wght@0,400..700;1,400..700&family=Expletus+Sans:ital,wght@0,400..700;1,400..700&family=M+PLUS+1+Code:wght@100..700&family=Orbitron:wght@400..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Staatliches&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,100..900;1,100..900&family=Arimo:ital,wght@0,400..700;1,400..700&family=Expletus+Sans:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=M+PLUS+1+Code:wght@100..700&family=Orbitron:wght@400..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Staatliches&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Source Sans 3", sans-serif;
+   
+}
+
+/* NAVIGATIONS */
+
+.Main_Nav{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 28, 100, 1);
+    align-items: center;
+    width: 15%;
+    height: 97%;
+    position: fixed;
+    margin: 1rem;
+    justify-content: space-around;
+    border-radius: 30px;
+    margin-bottom: 1rem;
+    
+
+
+}
+
+.profile{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    
+}
+
+.profile img{
+  margin-left: 0.5rem;
+}
+
+.profile h1{
+    color: white;
+    font-size: 1.5rem;
+    margin-top: 20px;
+    align-self: center;
+    font-weight: 500;
+}
+
+.navigations{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 10rem;
+    justify-content: space-evenly;
+    height: 100%;
+}
+
+.navigations a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 10px 4rem;
+    border-radius: 30px; /* Rounded corners for initial state */
+    background-color: transparent;
+    border: 2px solid transparent;
+    transition: 0.3s ease;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.navigations a:hover {
+    background-color: white;
+    color: rgba(0, 28, 100, 1);
+    border: 2px solid white;
+    border-radius: 30px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.navigations .active{
+    background-color: white;
+    color: rgba(0, 28, 100, 1);
+    border: 2px solid white;
+    border-radius: 30px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+
+
+.logo{
+    display: flex;
+    margin-bottom:1rem ;
+
+  
+   
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex; /* Flex for side-by-side layout */
+    height: 100vh; /* Full height to fill the screen */
+}
+
+/* Main_Nav stays the same, no changes */
+.Main_Nav {
+    width: 15%; /* Sidebar width */
+    height: 95%;
+    position: fixed;
+    left: 1rem; /* Margin to stay away from edges */
+    top: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 30px;
+}
+
+/* Main_Dashboard updates to fit beside the nav */
+.Main_Notification{
+    margin-left: 17%; /* Push content beside the nav */
+    width: 60%;
+    padding: 20px;
+    overflow-y: auto;
+    height: 100vh; /* Full height */
+    box-sizing: border-box;
+    margin-top: 2rem;
+}
+
+/* Dashboard title styling */
+.notification h1 {
+    margin-top: 0;
+    color: rgba(0, 28, 100, 1);
+    font-size: 3rem;
+}
+
+
+
+.vertical-line {
+    width: 80%; /* Thickness of the line */
+    height: 2px; /* Full height */
+    background-color: rgba(0, 28, 100, 1); /* Line color */
+    position: absolute;
+    top: 10;
+    margin-left: 3rem;
+
+}
+
+/* Container styles */
+.NContent {
+    display: flex;
+    background-color: #f5f5f5;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    margin-top: 1rem;
+    border-radius: 20px;
+}
+
+/* Tab container */
+.filters {
+    display: inline-flex;
+    position: relative;
+    background: #fff;
+    width: 30%;
+    justify-content: space-around;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.363);
+    padding: 5px;
+    margin-bottom: 1.5rem;
+    margin-top: 2rem;
+}
+
+/* Links inside the filter */
+
+
+.filters a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    padding: 10px 20px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect with underline */
+.filters a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px; /* Sleeker underline */
+    background: linear-gradient(to right, navy, #001f54); /* Gradient effect for a modern touch */
+    bottom: -5px; /* Creates some distance from text */
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease-out, background-color 0.3s ease;
+}
+
+/* Show underline on hover */
+.filters a:hover::after {
+    transform: scaleX(1);
+}
+
+/* Active state with cleaner bottom border */
+.filters a.active {
+    color: navy;
+    position: relative;
+}
+
+/* Add a glow effect for active state */
+.filters a.active::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(to right, navy, #001f54);
+    bottom: 0px;
+    left: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 139, 0.4); /* Soft glow for active tab */
+    transform: scaleX(1);
+}
+
+/* Smooth transition for active link color */
+.filters a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 12px 24px; /* Increased padding for better spacing */
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Add slight scaling on hover for a modern feel */
+.filters a:hover {
+    color: #001f54;
+    
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Improved active state with subtle scale */
+.filters a.active:hover {
+    transform: translateY(-2px);
+}
+
+
+
+/* Indicator (blue underline) */
+.filters .indicator {
+    position: absolute;
+    height: 4px;
+    width: 50px; /* Adjust for size */
+    background: navy;
+    bottom: 5px;
+    left: 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Moving indicator for active tab */
+.filters a:nth-child(2).active ~ .indicator {
+    left: 80px; /* Moves to ARCHIVE */
+}
+
+
+.notif-content {
+    display: flex;
+    align-self: flex-start;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100vh;
+    background-color: white;
+    padding: 1.5rem;
+}
+
+.notif-button{
+    display: flex;
+    align-items: center;
+}
+
+.pin{
+    display: flex;
+    align-items: center;
+}
+
+.notif-content2 {
+    display: flex;
+    align-self: flex-start;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100vh;
+    background-color: white;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.notif-button2{
+    display: flex;
+    align-items: center;
+}
+
+.pin2{
+    display: flex;
+    align-items: center;
+}
+
+.notif-content-y {
+    display: flex;
+    align-self: flex-start;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100vh;
+    background-color: white;
+    padding: 1.5rem;
+   margin-top: 0.5rem;
+}
+
+.notif-button-y{
+    display: flex;
+    align-items: center;
+}
+
+.calendar{
+    display: flex;
+    align-items: center;
+}
+
+.notif-content-y2 {
+    display: flex;
+    align-self: flex-start;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100vh;
+    background-color: white;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.notif-button-y2{
+    display: flex;
+    align-items: center;
+}
+
+.calendar{
+    display: flex;
+    align-items: center;
+}
+
+.notif-content-d {
+    display: flex;
+    align-self: flex-start;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100vh;
+    background-color: white;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.notif-button-d{
+    display: flex;
+    align-items: center;
+}
+
+.review-btn {
+    background-color: navy; /* Dark blue background */
+    color: white; /* White text */
+    border: none;
+    padding: 8px 18px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Soft shadow */
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Button hover effect */
+.review-btn:hover {
+    background-color: #001f54; /* Slightly darker navy */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Stronger shadow on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Button focus for accessibility */
+.review-btn:focus {
+    outline: 2px solid #ffc107; /* Optional: Focus outline with yellow */
+    outline-offset: 2px;
+}
+
+
+/* Container styling */
+.feedback-container {
+    width: 450px;
+    background-color: #e5e5e5;
+    border-radius: 20px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    height: 80%;
+    margin: 3rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+/* Header styling */
+h2 {
+    font-size: 18px;
+    text-align: center;
+    color: navy;
+    margin-bottom: 5px;
+}
+
+/* Line under the title */
+hr {
+    width: 100%;
+    border: 0;
+    height: 1px;
+    background-color: #ccc;
+    margin: 0 auto 10px auto;
+}
+
+/* Rating filter buttons */
+.rating-filters {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+
+.rating-filters button {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    padding: 5px 10px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Button hover effect */
+.rating-filters button:hover {
+    background-color: navy;
+    color: white;
+}
+
+/* Feedback list container */
+.feedback-list {
+    overflow-y: auto;
+    max-height: 500px;
+}
+
+/* Feedback card styling */
+.feedback-card {
+    display: flex;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-card:hover {
+    display: flex;
+    background-color: #a7a7a7;
+    border-radius: 12px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.feedback-card strong{
+    font-size: 1.2rem;
+}
+
+/* User icon */
+.user-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #f5f5f5;
+    border: 2px solid navy;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: navy;
+    margin-right: 10px;
+    align-self: center;
+}
+
+/* Feedback details */
+.feedback-details p {
+    margin: 2px 0;
+    font-size: 12px;
+}
+
+/* Feedback message style */
+.feedback-msg {
+    font-style: italic;
+    color: #555;
+}
+
+/* Scrollbar styling */
+.feedback-list::-webkit-scrollbar {
+    width: 5px;
+}
+
+.feedback-list::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 10px;
+}
+
+/* Modal styles */
+.modal-container {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 20px;
+    width: 60%;
+    max-width: 700px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    animation: fade-in 0.3s ease-out;
+    font-family: Arial, sans-serif;
+    position: relative;
+    text-align: left;
+}
+
+/* Fade-in animation */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Close button */
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    color: #333;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #555;
+}
+
+/* Modal Header */
+.modal-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-icon {
+    width: 60px;
+    height: 60px;
+    margin-right: 15px;
+}
+
+.modal-header-info {
+    flex: 1;
+    margin-right: 1rem;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.right-align {
+    text-align: right;
+}
+
+/* Event Image */
+.modal-image {
+    margin-bottom: 15px;
+}
+
+.modal-image img {
+    width: 100%;
+    height: 250px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Description */
+.modal-description p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+    margin-top: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 90%;
+    }
+
+    .profile-icon {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+

@@ -290,23 +290,29 @@ textarea {
         width: 100%;
         margin-top: 60px;
         padding: 10px;
+        margin-left: 0%;
+        box-sizing: border-box;
     }
 
     .volunteer-list {
+        background-color: #f5f6fa;
+        border-radius: 20px;
+        padding: 20px;
+        width: 100%;
+        box-sizing: border-box;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        width: 80%;
-        gap: 10px;
-        justify-content: center;
     }
 
     .volunteer-item {
-        width: 90%;
+        width: 100%;
         text-align: center;
         padding: 10px;
         background: #f5f5f5;
         border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     /* Enable Full Page Scrolling */
@@ -316,8 +322,8 @@ textarea {
     }
 
 
-    .event-panel {
-        width: 40%;
+    body .event-panel {
+        width: 100%;
         background-color: white;
         padding: 30px;
         border-radius: 20px;
@@ -325,7 +331,7 @@ textarea {
         text-align: center;
     }
     
-    .event-image img {
+    .event-panel .event-image img {
         width: 100%;
         border-radius: 10px;
     }

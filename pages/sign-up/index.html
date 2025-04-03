@@ -2,55 +2,71 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up</title>
-    <link rel="stylesheet" href="../sign-up/assets/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="../sign-up/assets/css/style.css">
 </head>
 
 <header>
-    <nav>
-        <div class="logo">
-            <a href="../../index.html">
-                <img src="../sign-up/assets/img/logo (2).png" class="logo_resize">
-            </a>
-        </div>
-        <div class="log_in">
-            <p>Already Have an Account?</p>
-            <a href="../login/index.html" class="click">Log In</a>
-        </div>
-    </nav>
+  <nav>
+    <div class="logo">
+      <a href="../../index.html">
+        <img src="../sign-up/assets/img/logo (2).png" class="logo_resize">
+      </a>
+    </div>
+    <div class="log_in">
+      <p>Already Have an Account?</p>
+      <a href="../login/index.html" class="click">Log In</a>
+    </div>
+  </nav>
 </header>
 
 <body>
-    <section class="hero">
-        <img src="../sign-up/assets/img/wallpaper.jpg" alt="wallpaper" class="wallpaper">
+  <section class="hero">
+    <img src="../sign-up/assets/img/wallpaper.jpg" alt="wallpaper" class="wallpaper">
 
-        <div class="container">
-            <h2>Unlock Opportunities. <br> Connect Communities.</h2>
-            <h1>Sign up to Join Volunkey.</h1>
+    <div class="container">
+      <h2>Unlock Opportunities. <br> Connect Communities.</h2>
+      <h1>Sign up to Join Volunkey.</h1>
 
-            <!-- ✅ Corrected Form with Proper IDs -->
-            <div class="form-container">
-                <label for="reg-email">Email:</label>
-                <input type="text" id="reg-email" placeholder="casey.smith@example.com">
+      <!-- ✅ Corrected Form with Proper IDs -->
+      <div class="form-container">
+        <label for="reg-email">Email:</label>
+        <input type="text" id="reg-email" placeholder="casey.smith@example.com">
 
-                <label for="reg-name">Name:</label>
-                <input type="text" id="reg-name" placeholder="Name" />
+        <label for="reg-name">Name:</label>
+        <input type="text" id="reg-name" placeholder="Name" />
 
-                <label for="reg-password">Password:</label>
-                <input type="password" id="reg-password" placeholder="Password" />
-            </div>
-            
-            <!-- ✅ Corrected Button with Proper ID -->
-            <div class="button_container">
-                <button id="signup-btn">Sign up</button>
-            </div>
+        <label for="reg-password">Password:</label>
+        <input type="password" id="reg-password" placeholder="Password" />
+      </div>
+
+      <div id="label">
+        <h1>Sign up as</h1>
+      </div>
+
+      <div class="login-as-container">
+        <div class="login-as-text">
+          <label for="login-as-organizer">Organizer</label>
+          <input type="checkbox" id="login-as-organizer" />
         </div>
-    </section>
 
-    <!-- ✅ Corrected Script Path -->
-    <script src="../sign-up/assets/js/scripts.js"></script>
+        <div class="login-as-text">
+          <label for="login-as-volunteer">Volunteer</label>
+          <input type="checkbox" id="login-as-volunteer" />
+        </div>
+      </div>
+
+      <!-- ✅ Corrected Button with Proper ID -->
+      <div class="button_container">
+        <button id="signup-btn">Sign up</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ✅ Corrected Script Path -->
+  <script src="../sign-up/assets/js/scripts.js"></script>
 </body>
 
 </html>
