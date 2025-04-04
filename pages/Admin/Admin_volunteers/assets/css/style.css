@@ -12,6 +12,7 @@
    
 }
 
+
 /* NAVIGATIONS */
 
 .Main_Nav{
@@ -26,7 +27,6 @@
     justify-content: space-around;
     border-radius: 30px;
     margin-bottom: 1rem;
-    
 
 
 }
@@ -64,7 +64,7 @@
 .navigations a {
     color: white;
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 2rem;
     padding: 10px 4rem;
     border-radius: 30px; /* Rounded corners for initial state */
     background-color: transparent;
@@ -95,9 +95,6 @@
 .logo{
     display: flex;
     margin-bottom:1rem ;
-
-  
-   
 }
 
 
@@ -266,3 +263,286 @@ h3 {
     font-weight: bold;
     text-align: center;
 }
+
+
+
+
+/* ========== 1440p (Large Screens) ========== */
+@media (max-width: 1440px) {
+
+
+    body .Main_Nav .navigations a {
+      font-size: 0.8rem;
+      border-radius: 20px; /* Rounded corners for initial state */
+      padding: 10px 2rem;
+    }
+
+    .Main_Notification {
+      width: 60%;
+    }
+  
+    .right{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-right: 1rem;
+        margin-left: 1rem;
+    }
+    
+    
+    .stat-card {
+        background-color: rgba(0, 28, 100, 1); /* Dark blue */
+        border-radius: 20px;
+        width: 250px; /* Bigger width */
+        height: 250px; /* Bigger height */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Slightly deeper shadow */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    /* Larger circle to match the design */
+    .circle {
+        width: 100px; /* Increased size */
+        height: 100px;
+        background-color: white;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Bigger font size for number */
+    .circle h2 {
+        font-size: 4rem;
+        color: rgba(0, 28, 100, 1);
+        margin: 0;
+    }
+    
+    /* Text below the circle */
+    .stat-card p {
+        color: white;
+        font-size: 1.2rem;
+        margin-top: 15px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    
+.container {
+    margin-top: 5rem;
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(2, 0fr);
+    gap: 3rem;
+    justify-content: left;
+    height: 100%;
+   
+ 
+
+}
+
+.card {
+    background-color: #e9e9e9;
+    border: 1px solid #ccc;
+    width: 250px;
+    height:auto;
+    text-align: center;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    padding: .5rem;
+    
+
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.content {
+    padding: 15px;
+    background-color: #e9e9e9;
+}
+
+h3 {
+    margin: 10px 0;
+    font-size: 15px;
+    color: #1a1a1a;
+}
+
+.btn {
+    background-color: #1a3d7c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 25px;
+}
+  }
+  
+  /* ========== 1024p (Medium Screens / Tablets) ========== */
+  @media (max-width: 1024px) {
+    .Main_Nav {
+      width: 20%;
+    }
+  
+    .Main_Notification {
+      margin-left: 22%;
+      width: 70%;
+    }
+  
+    .container {
+      grid-template-columns: 1fr;
+      justify-content: center;
+    }
+  
+    .card {
+      width: 100%;
+    }
+  
+    .stat-card {
+      width: 400px;
+      height: 400px;
+    }
+  
+    .circle {
+      width: 250px;
+      height: 250px;
+    }
+  
+    .circle h2 {
+      font-size: 4rem;
+    }
+
+    .stat-card {
+        background-color: rgba(0, 28, 100, 1); /* Dark blue */
+        border-radius: 20px;
+        width: 250px; /* Bigger width */
+        height: 250px; /* Bigger height */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Slightly deeper shadow */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    /* Larger circle to match the design */
+    .circle {
+        width: 100px; /* Increased size */
+        height: 100px;
+        background-color: white;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Bigger font size for number */
+    .circle h2 {
+        font-size: 4rem;
+        color: rgba(0, 28, 100, 1);
+        margin: 0;
+    }
+    
+    /* Text below the circle */
+    .stat-card p {
+        color: white;
+        font-size: 1.2rem;
+        margin-top: 15px;
+        font-weight: bold;
+        text-align: center;
+    }
+  }
+  
+  /* ========== 375p (Mobile Devices) ========== */
+  @media (max-width: 480px) {
+    body {
+      flex-direction: column;
+    }
+  
+    .Main_Nav {
+      flex-direction: row;
+      width: 100%;
+      height: auto;
+      position: relative;
+      justify-content: space-around;
+      margin: 0;
+      border-radius: 0;
+      padding: 1rem 0;
+      top: 0;
+      left: 0;
+    }
+  
+    .profile {
+      display: none;
+    }
+  
+    .navigations {
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin: 0;
+      height: auto;
+    }
+  
+    .navigations a {
+      font-size: 0.9rem;
+      padding: 10px 15px;
+    }
+  
+    .logo {
+      display: none;
+    }
+  
+    .Main_Notification {
+      margin-left: 0;
+      width: 100%;
+      padding: 10px;
+      margin-top: 1rem;
+    }
+  
+    .notification h1 {
+      font-size: 2rem;
+    }
+  
+    .container {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      justify-content: center;
+      width: 100%;
+    }
+  
+    .card {
+      width: 100%;
+    }
+  
+    .right {
+      margin: 0 auto;
+      padding: 1rem;
+    }
+  
+    .stat-card {
+      width: 200px;
+      height: auto;
+      padding: 2rem 1rem;
+    }
+  
+    .circle {
+      width: 100px;
+      height: 100px;
+    }
+  
+    .circle h2 {
+      font-size: 3rem;
+    }
+  
+    .stat-card p {
+      font-size: 1rem;
+    }
+  }
+  
