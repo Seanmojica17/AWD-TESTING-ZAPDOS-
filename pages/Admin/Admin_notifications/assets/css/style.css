@@ -95,9 +95,6 @@
 .logo{
     display: flex;
     margin-bottom:1rem ;
-
-  
-   
 }
 
 
@@ -619,15 +616,279 @@ hr {
 }
 
 /* Responsive */
-@media (max-width: 768px) {
-    .modal-content {
-        width: 90%;
+@media (max-width: 1440px) {
+/* Default Styles - 1440px (Desktop) */
+
+
+.Main_Nav{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 28, 100, 1);
+    align-items: center;
+    width: 15%;
+    height: 97%;
+    position: fixed;
+    margin: 1rem;
+    justify-content: space-around;
+    border-radius: 30px;
+    margin-bottom: 1rem;
+    
+
+
+}
+
+.profile{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    
+}
+
+.profile img{
+  margin-left: 0.5rem;
+}
+
+.profile h1{
+    color: white;
+    font-size: 1.5rem;
+    margin-top: 20px;
+    align-self: center;
+    font-weight: 500;
+}
+
+.navigations{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 10rem;
+    justify-content: space-evenly;
+    height: 100%;
+}
+
+.navigations a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 10px 2rem;
+    border-radius: 30px; /* Rounded corners for initial state */
+    background-color: transparent;
+    border: 2px solid transparent;
+    transition: 0.3s ease;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.Main_Notification{
+    margin-left: 17%; /* Push content beside the nav */
+    width: 100%;
+    padding: 20px;
+    overflow-y: auto;
+    height: 100vh; /* Full height */
+    box-sizing: border-box;
+    margin-top: 2rem;
+}
+
+.notifs-d {
+    width: 90%;
+    border-style: solid;
+    border-color: red;
+}
+
+.notif-text-d {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 100%;
+    max-width: 1000px;
+    padding: 0px;
+    border-radius: 15px;
+    box-sizing: border-box;
+    margin: 0 auto 0px;
+    gap: 10px;
+}
+.notif-content,
+.notif-content2,
+.notif-content-y,
+.notif-content-y2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    border-radius: 15px;
+    box-sizing: border-box;
+    margin: 0 auto 20px;
+    gap: 10px;
+}
+
+.notif-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 70%;
+}
+
+.notif-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.notif-right button {
+    padding: 10px 15px;
+    font-size: 16px;
+}
+
+.NContent {
+    display: flex;
+    background-color: #f5f5f5;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    margin-top: 1rem;
+    border-radius: 20px;
+}
+}
+
+/* Hamburger Button (Hidden by default) */
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    background-color: transparent;
+    border: none;
+    color: #001C64;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 999;
+    cursor: pointer;
+}
+
+/* Mobile Styles for 375px */
+@media screen and (max-width: 480px) {
+    .hamburger {
+        display: block;
     }
 
-    .profile-icon {
-        width: 50px;
-        height: 50px;
+    .Main_Nav {
+        width: 250px;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: -300px;
+        background-color: rgba(0, 28, 100, 1);
+        transition: left 0.3s ease;
+        z-index: 998;
+        border-radius: 0;
+        margin: 0;
+        padding-top: 3rem;
+    }
+
+    .Main_Nav.open {
+        left: 0;
+    }
+
+    .navigations {
+        margin-bottom: 2rem;
+    }
+
+    .navigations a {
+        padding: 12px 2rem;
+        font-size: 1.2rem;
+    }
+
+    .profile img {
+        width: 60px;
+    }
+
+    .profile h1 {
+        font-size: 1.2rem;
+    }
+
+    .logo img {
+        width: 80px;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        overflow-y: auto; /* this keeps vertical scrolling */
+        overflow-x: hidden;
+        overflow-y: auto;
+        height: 100vh;
+        position: relative;
+    }
+
+    .notification h1 {
+        font-size: 2rem;
+    }
+
+    html, body {
+        overflow-x: hidden;
+      }
+
+      .Main_Notification{
+        margin-left: 0%; /* Push content beside the nav */
+        width: 100%;
+        padding: 20px;
+        overflow-y: auto;
+        height: 100%; /* Full height */
+        box-sizing: border-box;
+        margin-top: 2rem;
+    }
+
+    .NContent {
+        display: flex;
+        background-color: #f5f5f5;
+        flex-direction: column;
+        align-items: center;
+        height: 100vh;
+        margin-top: 1rem;
+        border-radius: 20px;
+    }
+
+    .filters {
+        display: inline-flex;
+        position: relative;
+        background: #fff;
+        width: 90%;
+        justify-content: space-around;
+        border-radius: 20px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.363);
+        padding: 5px;
+        margin-bottom: 1.5rem;
+        margin-top: 2rem;
+    }
+
+    .feedback-container {
+        width: 100vw;
+        background-color: #e5e5e5;
+        border-radius: 20px;
+        padding: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow-y: auto;
+        height: 50vh;
+        margin: 3rem;
+        margin-left: 0rem;
+        margin-right: 1rem;
+    }
+
+    .modal-container {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
     }
 }
+
 
 
