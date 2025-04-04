@@ -95,9 +95,6 @@
 .logo{
     display: flex;
     margin-bottom:1rem ;
-
-  
-   
 }
 
 
@@ -237,5 +234,180 @@ body {
     margin-left: 1rem;
 }
 
+/* 1440px screens */
+@media screen and (max-width: 1440px) {
+    .Main_Nav {
+        width: 15%;
+    }
+
+    .Main_Notification {
+        margin-left: 17%;
+        width: 60%;
+    }
+
+    .navigations a {
+        font-size: 1.5rem;
+        padding: 10px 4rem;
+    }
+
+    .notification h1 {
+        font-size: 2.5rem;
+    }
+
+    .tab-container {
+        width: 80%;
+    }
+
+    .navigations{
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        margin-bottom: 10rem;
+        justify-content: space-evenly;
+        height: 100%;
+    }
+    
+    .navigations a {
+        color: white;
+        text-decoration: none;
+        font-size: 1rem;
+        padding: 10px 2rem;
+        border-radius: 30px; /* Rounded corners for initial state */
+        background-color: transparent;
+        border: 2px solid transparent;
+        transition: 0.3s ease;
+        text-align: center;
+        box-sizing: border-box;
+    }
+}
+
+/* 375px screens */
+@media screen and (max-width: 667px) {
+    body {
+        flex-direction: column;
+    }
+
+    .Main_Nav {
+        width: 100%;
+        height: auto;
+        position: static;
+        margin: 0;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .Main_Notification {
+        margin-left: 0;
+        width: 100%;
+        margin-top: 2rem;
+    }
+
+    .navigations a {
+        font-size: 1.2rem;
+        padding: 10px;
+    }
+
+    .logo {
+        margin-bottom: 1rem;
+    }
+
+    .notification h1 {
+        font-size: 1.8rem;
+    }
+
+    .tab-container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .tab {
+        padding: 8px 0;
+        font-size: 1.1rem;
+    }
+
+    .event-details button {
+        width: 100%;
+    }
+
+    #label {
+        margin-left: 0;
+    }
+}
+
+/* Hamburger Button (Hidden by default) */
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    background-color: transparent;
+    border: none;
+    color: #001C64;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 999;
+    cursor: pointer;
+}
+
+/* Show hamburger button on mobile */
+@media screen and (max-width: 667px) {
+    .hamburger {
+        display: block;
+    }
+    .Main_Nav {
+        width: 250px;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: -300px;
+        background-color: rgba(0, 28, 100, 1);
+        transition: left 0.3s ease;
+        z-index: 998;
+        border-radius: 0;
+        margin: 0;
+        padding-top: 3rem;
+    }
+
+
+    /* Sidebar - Initially hidden off-screen */
+    #sidebar {
+        width: 250px;
+        position: fixed;
+        top: 0;
+        left: -250px; /* Hidden off-screen by default */
+        transition: left 0.3s ease;
+    }
+    
+    /* Sidebar - When open */
+    #sidebar.open {
+        left: 0; /* Shows the sidebar */
+    }
+
+    .Main_Nav.open {
+        left: 0;
+    }
+
+    /* Show navigations when toggled */
+    .navigations.active {
+        display: flex;
+    }
+
+    .navigations a {
+        font-size: 1.5rem;
+        padding: 15px 0;
+        width: 100%;
+        text-align: left; /* Align text to the left */
+        color: white;
+        text-decoration: none;
+    }
+
+    .navigations a:hover {
+        background-color: white;
+        color: rgba(0, 28, 100, 1);
+    }
+
+    .logo {
+        margin-bottom: 1rem;
+    }
+}
 
 

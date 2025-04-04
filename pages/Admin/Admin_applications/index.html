@@ -9,10 +9,14 @@
 
 <body>
 
-<section class="Main_Nav">
+<!-- Hamburger Menu Button (for mobile) -->
+<button class="hamburger" id="hamburger">&#9776;</button>
+
+<!-- Sidebar -->
+<section class="Main_Nav" id="sidebar">
     <div class="profile">
         <img src="./assets/img/profile.png">
-        <h1> ADMIN </h1>
+        <h1>ADMIN</h1>
     </div>
 
     <div class="navigations">
@@ -20,8 +24,7 @@
         <a href="../Admin_events/index.html">Events</a>
         <a href="../Admin_volunteers/index.html">Volunteers</a>
         <a href="../Admin_applications/index.html" class="active">Applications</a>
-        <a href="../Admin_notifications/index.html">Notification</a>
-        <a href="#" id="logout-btn">Logout</a> <!-- 🆕 Logout Button -->
+        <a href="#" id="logout-btn">Logout</a>
     </div>
 
     <div class="logo">
@@ -49,56 +52,7 @@
     </div>
 </section>
 
-<section class="right-side">
-    <div class="profile-container">
-        <!-- User Profile Section -->
-        <div class="profile-header">
-            <div class="avatar"></div>
-            <h2 id="userName">Name</h2>
-            <p class="status" id="userStatus">Pending</p>
-        </div>
 
-        <!-- Information Grid -->
-        <div class="info-grid">
-            <div class="info-item">
-                <p><strong>Location</strong></p>
-                <p id="userLocation">-</p>
-            </div>
-            <div class="info-item">
-                <p><strong>Email Address</strong></p>
-                <p id="userEmail">-</p>
-            </div>
-            <div class="info-item">
-                <p><strong>Application date</strong></p>
-                <p id="appDate">-</p>
-            </div>
-            <div class="info-item">
-                <p><strong>Skills & Interests</strong></p>
-                <p id="userSkills">-</p>
-            </div>
-            <div class="info-item">
-                <p><strong>Applied Event</strong></p>
-                <p id="appliedEvent">-</p>
-            </div>
-            <div class="info-item">
-                <p><strong>Availability</strong></p>
-                <p id="userAvailability">-</p>
-            </div>
-        </div>
-
-        <!-- Volunteer Experience -->
-        <div class="volunteer-experience">
-            <p><strong>Volunteer Experience</strong></p>
-            <p id="volunteerExperience">-</p>
-        </div>
-
-        <!-- Action Buttons -->
-        <div class="action-buttons">
-            <button class="verify" onclick="verify()">✔️ Verify</button>
-            <button class="deny" onclick="deny()">❌ Deny</button>
-        </div>
-    </div>
-</section>
 
 <script src="../Admin_applications/assets/js/script.js"></script>
 </body>
