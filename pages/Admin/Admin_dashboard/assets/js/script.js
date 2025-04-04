@@ -12,3 +12,12 @@ const logoutButton = document.getElementById('logout-btn');
 if (logoutButton) {
     logoutButton.addEventListener('click', logout);
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    const hamburger = document.getElementById("hamburger");
+    const sidebar = document.getElementById("sidebar");
+
+    hamburger.addEventListener("click", function () {
+        sidebar.classList.toggle("open");
+    });
+});
