@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
         window.location.href = "../../pages/Organizers/Org_dashboard/index.html";
       } else if (email.endsWith("@user.com")) {
         // 🎯 Regular User Case
-        window.location.href = "../../pages/User/User_dashboard/index.html";
+        window.location.href = "../../pages/User/User-events/index.html";
       } else {
         alert("⚠️ Invalid email domain. Please use an appropriate domain.");
       }

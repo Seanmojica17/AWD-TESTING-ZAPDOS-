@@ -27,6 +27,31 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
     }
 
+    // Delete a user by their ID
+    async function deleteUser(userId) {
+        try {
+            const response = await fetch(`https://demo-api-skills.vercel.app/api/VolunteerOrg/users/${userId}`, {
+                method: "DELETE",
+            });
+
+            if (response.ok) {
+                const data = await response.json();
+                if (data.message === "User deleted successfully") {
+                    console.log(`User with ID ${userId} deleted`);
+                    // Refresh users list after deleting
+                    allUsers = await fetchUsers();
+                    filterUsers(filterSelect.value); // Re-filter after delete
+                } else {
+                    console.error("Failed to delete user.");
+                }
+            } else {
+                console.error("Failed to delete user.");
+            }
+        } catch (error) {
+            console.error("Error deleting user:", error);
+        }
+    }
+
     // Display users in the usersContainer div
     function displayUsers(users) {
         usersContainer.innerHTML = ""; // Clear previous content
@@ -40,7 +65,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         userList.classList.add("user-list"); // Optional: Add a class for styling
 
         users.forEach((user) => {
-            const listItem = document.createElement("li");
+            const listItem = document.createElement("div");
             listItem.classList.add("user-item"); // Optional: Add a class for styling
 
             const createdAt = user.createdAt ? new Date(user.createdAt).toLocaleDateString() : "N/A";
@@ -48,9 +73,17 @@ document.addEventListener("DOMContentLoaded", async () => {
             listItem.innerHTML = `
                 <strong>Name:</strong> ${user.name} <br>
                 <strong>Email:</strong> ${user.email} <br>
-                <strong>Created At:</strong> ${createdAt} 
-                <hr>
+                <strong>Created At:</strong> ${createdAt} <br>
+                <button class="delete-btn" data-user-id="${user.id}">Delete</button>
+               
             `;
+
+            // Attach delete event to each delete button
+            const deleteButton = listItem.querySelector(".delete-btn");
+            deleteButton.addEventListener("click", () => {
+                const userId = deleteButton.getAttribute("data-user-id");
+                deleteUser(userId); // Call deleteUser() when the button is clicked
+            });
 
             userList.appendChild(listItem);
         });
