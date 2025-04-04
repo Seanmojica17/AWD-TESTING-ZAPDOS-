@@ -12,6 +12,7 @@
    
 }
 
+
 /* NAVIGATIONS */
 
 .Main_Nav{
@@ -245,3 +246,106 @@ body {
     transition: .1s ease;
 }
 
+
+@media screen and (max-width: 1440px) {
+
+    .profile h1 {
+        font-size: 1rem;
+    }
+
+    .navigations a {
+        color: white;
+        text-decoration: none;
+        font-size: 1rem;
+        padding: 10px 2rem;
+        border-radius: 30px; /* Rounded corners for initial state */
+        background-color: transparent;
+        border: 2px solid transparent;
+        transition: 0.3s ease;
+        text-align: center;
+        box-sizing: border-box;
+    }
+}
+
+/* Hamburger Button (Hidden by default) */
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    background-color: transparent;
+    border: none;
+    color: #001C64;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 999;
+    cursor: pointer;
+}
+
+/* Show hamburger button on mobile */
+@media screen and (max-width: 667px) {
+    .hamburger {
+        display: block;
+    }
+    .Main_Nav {
+        width: 250px;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: -300px;
+        background-color: rgba(0, 28, 100, 1);
+        transition: left 0.3s ease;
+        z-index: 998;
+        border-radius: 0;
+        margin: 0;
+        padding-top: 3rem;
+    }
+
+
+    /* Sidebar - Initially hidden off-screen */
+    #sidebar {
+        width: 250px;
+        position: fixed;
+        top: 0;
+        left: -250px; /* Hidden off-screen by default */
+        transition: left 0.3s ease;
+    }
+    
+    /* Sidebar - When open */
+    #sidebar.open {
+        left: 0; /* Shows the sidebar */
+    }
+
+    .Main_Nav.open {
+        left: 0;
+    }
+
+    /* Show navigations when toggled */
+    .navigations.active {
+        display: flex;
+    }
+
+    .navigations a {
+        font-size: 1.5rem;
+        padding: 15px 0;
+        width: 100%;
+        text-align: left; /* Align text to the left */
+        color: white;
+        text-decoration: none;
+    }
+
+    .navigations a:hover {
+        background-color: white;
+        color: rgba(0, 28, 100, 1);
+    }
+
+    .logo {
+        margin-bottom: 1rem;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+    }
+
+}

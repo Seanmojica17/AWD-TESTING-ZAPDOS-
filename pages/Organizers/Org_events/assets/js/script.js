@@ -194,3 +194,13 @@ function setActiveTab(activeTabId) {
         activeTab.classList.add('active');
     }
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    const hamburger = document.getElementById("hamburger"); // Get the hamburger button
+    const sidebar = document.getElementById("sidebar"); // Get the sidebar element
+
+    // Listen for the click event on the hamburger button
+    hamburger.addEventListener("click", function () {
+        sidebar.classList.toggle("open"); // Toggle the "open" class on sidebar (this controls visibility)
+    });
+});
