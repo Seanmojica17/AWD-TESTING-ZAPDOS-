@@ -48,7 +48,6 @@ function fetchApplications(activityId) {
                 const userInfo = document.createElement('div');
                 userInfo.classList.add('user-info');
                 userInfo.innerHTML = `
-                    <div class="avatar"></div>
                     <div class="user-text">
                         <p><strong>${application.user.name}</strong></p>
                         <p>Applied Event: ${application.activityId}</p>
@@ -94,3 +93,14 @@ function updateApplicationStatus(applicationId, status) {
         console.error('Error updating application status:', error);
     });
 }
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const hamburger = document.getElementById("hamburger"); // Get the hamburger button
+    const sidebar = document.getElementById("sidebar"); // Get the sidebar element
+
+    // Listen for the click event on the hamburger button
+    hamburger.addEventListener("click", function () {
+        sidebar.classList.toggle("open"); // Toggle the "open" class on sidebar (this controls visibility)
+    });
+});

@@ -3,23 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>Volunteers</title>
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
 
-<section class="Main_Nav">
+<!-- Hamburger Menu Button (for mobile) -->
+<button class="hamburger" id="hamburger">&#9776;</button>
+
+<!-- Sidebar -->
+<section class="Main_Nav" id="sidebar">
     <div class="profile">
         <img src="./assets/img/profile.png">
-        <h1>Welcome Orgname</h1>
+        <h1>Organization</h1>
     </div>
 
     <div class="navigations">
         <a href="../Org_dashboard/index.html">Dashboard</a>
-        <a href="../Org_events/index.html">Events</a>
-        <a href="../Org_volunteers/index.html" class="active">Volunteers</a>
-      
+        <a href="../Org_events/index.html" class="active">Events</a>
         <a href="#" id="logout-btn">Logout</a>
     </div>
 
@@ -27,6 +29,10 @@
         <img src="./assets/img/logo.png">
     </div>
 </section>
+    
+
+
+
 
 <section class="Main_applications">
     <div class="applications">
@@ -49,32 +55,6 @@
     </div>
 </section>
 
-<section class="right-side">
-    <div class="profile-container">
-        <!-- User Profile Section -->
-        <div class="profile-header">
-            <div class="avatar"></div>
-            <h2 id="applicantName">Name</h2>
-            <p class="status" id="applicantStatus">Pending</p>
-        </div>
-
-        <!-- Information Grid -->
-        <div class="info-grid">
-            <div class="info-item"><p><strong>Location</strong></p></div>
-            <div class="info-item"><p><strong>Email Address</strong></p></div>
-            <div class="info-item"><p><strong>Application date</strong></p></div>
-            <div class="info-item"><p><strong>Skills & Interests</strong></p></div>
-            <div class="info-item"><p><strong>Applied Event</strong></p></div>
-            <div class="info-item"><p><strong>Availability</strong></p></div>
-        </div>
-        
-        <!-- Action Buttons -->
-        <div class="action-buttons">
-            <button class="verify" id="verifyBtn">✔️ Verify</button>
-            <button class="deny" id="denyBtn">❌ Deny</button>
-        </div>
-    </div>
-</section>
 
 <script src="../Org_volunteers/assets/js/script.js"></script>
 </body>
