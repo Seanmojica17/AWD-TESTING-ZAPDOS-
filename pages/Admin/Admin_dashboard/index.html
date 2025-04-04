@@ -26,6 +26,7 @@
     <a href="../Admin_volunteers/index.html"  >Volunteers</a>
     <a href="../Admin_applications/index.html" >Applications</a>
     <a href="../Admin_notifications/index.html"  >Notification</a>
+    <a href="#" id="logout-btn">Logout</a> <!-- 🆕 Logout Button -->
 </div>
 
 <div class="logo">
@@ -51,14 +52,15 @@
             <section class="dashboard-stats">
                 <div class="stat-card">
                     <div class="circle">
-                        <h2>0</h2>
+                        <h2 id="event-count">0</h2> <!-- Added ID -->
                     </div>
                     <p>TOTAL EVENTS</p>
                 </div>
+                   
             
                 <div class="stat-card">
                     <div class="circle">
-                        <h2>0</h2>
+                        <h2 id="volunteer-count">0</h2> <!-- Added ID -->
                     </div>
                     <p>TOTAL VOLUNTEERS</p>
                 </div>
@@ -114,5 +116,7 @@
         </div>
     </div>
 </section>
+
+<script src="../Admin_dashboard/assets/js/script.js"></script>
 
 </body>

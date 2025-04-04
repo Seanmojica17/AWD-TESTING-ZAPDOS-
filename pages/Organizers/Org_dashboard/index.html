@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <section class="Main_Nav">
+        <div class="profile">
+            <img src="./assets/img/profile.png">
+            <h1>Welcome Orgname</h1>
+        </div>
+        <div class="navigations">
+            <a href="../Org_dashboard/index.html" class="active">Dashboard</a>
+            <a href="../Org_events/index.html">Events</a>
+        
+            <a href="#" id="logout-btn">Logout</a> <!-- 🆕 Logout Button -->
+        </div>
+        <div class="logo">
+            <img src="./assets/img/logo.png">
+        </div>
+    </section>
+    
+    <section class="Main_Notification">
+        <div class="notification">
+            <h1>DASHBOARD</h1>
+            <hr class="custom-line">
+        </div>
+    
+        <h2>Create Activity</h2>
+        <input type="text" id="event-title" placeholder="Title">
+        <input type="text" id="event-description" placeholder="Description">
+        <input type="text" id="event-location" placeholder="Location">
+        <input type="datetime-local" id="event-date">
+        <button id="create-event-btn">Create Event</button>
+    
+    
+
+        <!-- Event List -->
+        <div id="event-list">
+            <h2>Upcoming Events</h2>
+            <div class="container" id="activities-container">
+            
+            </div>
+        </section>
+         
+
+    <div class="right">
+        <div class="Dashboard-content">
+            <section class="dashboard-stats">
+                <div class="stat-card">
+                    <div class="circle">
+                        <h2 id="event-count">0</h2> <!-- Added id -->
+                    </div>
+                    <p>TOTAL EVENTS</p>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Load Regular User Functions -->
+    <script src="../Org_dashboard/assets/js/script.js"></script>
+</body>
+</html>

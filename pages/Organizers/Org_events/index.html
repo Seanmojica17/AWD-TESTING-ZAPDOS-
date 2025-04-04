@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+<section class="Main_Nav">
+    <div class="profile">
+        <img src="./assets/img/profile.png" >
+        <h1> Welcome Orgname  </h1>
+    </div>
+    <div class="navigations">
+        <a href="../Org_dashboard/index.html">Dashboard</a>
+        <a href="../Org_events/index.html" class="active">Events</a>
+     
+        
+        <a href="#" id="logout-btn">Logout</a> <!-- 🆕 Logout Button -->
+    </div>
+    <div class="logo">
+        <img src="./assets/img/logo.png">
+    </div>
+</section>
+
+<section class="Main_Notification">
+    <div class="notification">
+        <h1>EVENTS</h1>
+        <hr class="custom-line">
+    </div>
+
+    <div class="tab-container">
+        <div class="tab active" id="my-events-tab">MY EVENTS</div>
+        <div class="tab" id="all-events-tab">ALL EVENTS</div>
+   
+    </div>
+
+    <div class="event-container" id="event-container">
+        <!-- Events will be dynamically added here -->
+    </div>
+</section>
+
+
+
+    <script src="../Org_events/assets/js/script.js"></script>
+</body>
+
+</html>

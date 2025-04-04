@@ -12,14 +12,43 @@
    
 }
 
+
 /* NAVIGATIONS */
 
 body {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    overflow-y: auto;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    display: flex;
+}
+
+/* Navigation (Keep Hamburger Menu) */
+.Main_Nav {
+    position: fixed;
+    left: -100%;
+    width: 250px;
     height: 100vh;
+    background-color: #001F5B;
+    transition: left 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+#menu-toggle:checked ~ .Main_Nav {
+    left: 0;
+}
+
+.menu-icon {
+    display: block;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #001c64;
+    z-index: 1100;
 }
 
 .Main_Nav {
@@ -218,7 +247,6 @@ body {
 
 
 
-
 @media screen and (max-width: 375px) {
 
     body {
@@ -239,109 +267,98 @@ body {
         margin-top: 10px;
     }
 
-
+    /* Fixed Main Navigation */
     .Main_Nav {
         display: flex;
         flex-direction: column;
         background-color: rgba(0, 28, 100, 1);
         align-items: center;
-        width: 15%;
-        height: 95%;
+        width: 100px; /* Adjusted width for better fit */
+        height: 100%;
         position: fixed;
-        left: 1rem;
-        top: 1rem;
-        border-radius: 30px;
+        left: 0;
+        top: 0;
+        border-radius: 0px;
+        padding: 10px 0;
+        transition: width 0.3s ease-in-out;
     }
-    
+
     .profile {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin-top: 2rem;
+        margin-top: 1rem;
     }
-    
+
     .profile img {
-        margin-left: 0.5rem;
-        width: 2rem;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
     }
-    
+
     .profile h1 {
         color: white;
-        font-size: 1rem;
-        margin-top: 20px;
+        font-size: 0.7rem;
+        margin-top: 5px;
         font-weight: 500;
+        display: none; /* Hide text due to limited space */
     }
 
     .navigations {
         display: flex;
         flex-direction: column;
-        margin-top: 20px;
-        justify-content: space-evenly;
-        height: 100%;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        width: 100%;
     }
-    
+
     .navigations a {
         color: white;
         text-decoration: none;
-        font-size: 0.5rem;
-        padding: 1px 1px;
-        border-radius: 30px;
-        background-color: transparent;
-        border: 2px solid transparent;
-        transition: 0.3s ease;
         text-align: center;
-        box-sizing: border-box;
+        transition: 0.3s ease-in-out;
+        width: 100%;
+        display: flex;
+        border-style: solid;
     }
 
-    .navigations a:hover, .navigations .active {
+    .Main_Nav .navigations a {
+        font-size: 0.8rem;
+        text-align: center;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+    }
+
+    .navigations a:hover,
+    .navigations .active {
         background-color: white;
         color: rgba(0, 28, 100, 1);
-        border: 2px solid white;
+        font-weight: bold;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
-
-
+    /* Dashboard */
     .Main_Dashboard {
-        margin-left: 17%;
-        width: calc(100% - 20%);
+        margin-left: 75px; /* Adjusted to fit smaller navigation */
+        width: calc(100% - 80px);
         padding: 20px;
         overflow-y: auto;
-        height: 300vh;
+        height: 100vh;
         box-sizing: border-box;
-        margin-top: 2rem;
-        overflow: hidden;
+        margin-top: 1rem;
     }
-    
+
     .dashboard h1 {
         margin-top: 0;
         color: rgba(0, 28, 100, 1);
         font-size: 1rem;
         font-weight: 500;
     }
-    
-    .Main_Nav {
-        display: flex;
-        flex-direction: column;
-        background-color: rgba(0, 28, 100, 1);
-        align-items: center;
-        width: 15%;
-        height: 95%;
-        position: fixed;
-        left: 1rem;
-        top: 1rem;
-        border-radius: 30px;
-    }
-    .Main_Dashboard {
-        margin-left: 17%;
-        width: calc(100% - 20%);
-        padding: 20px;
-        overflow-y: auto;
-        height: 100vh;
-        box-sizing: border-box;
-        margin-top: 2rem;
-    }
+
+    /* Volunteer List */
     .volunteer-list {
         background-color: #f5f6fa;
         border-radius: 20px;
@@ -350,6 +367,7 @@ body {
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
         box-sizing: border-box;
     }
+
     .volunteer-item {
         display: flex;
         align-items: center;
@@ -360,15 +378,14 @@ body {
         position: relative;
         flex-direction: column;
     }
+
     .volunteer-image {
         background-color: white;
         padding: 2rem;
-        padding-left: 1rem;
-        padding-right: 1rem;
         border-radius: 30px;
-        margin-right: 10px;
-        margin-left: 15px;
+        margin-bottom: 10px;
     }
+
     .volunteer-description {
         flex-grow: 1;
     }
@@ -383,6 +400,7 @@ body {
         top: 10px;
     }
 }
+
 
 
 

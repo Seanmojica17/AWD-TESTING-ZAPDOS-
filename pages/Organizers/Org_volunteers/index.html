@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+
+<section class="Main_Nav">
+    <div class="profile">
+        <img src="./assets/img/profile.png">
+        <h1>Welcome Orgname</h1>
+    </div>
+
+    <div class="navigations">
+        <a href="../Org_dashboard/index.html">Dashboard</a>
+        <a href="../Org_events/index.html">Events</a>
+        <a href="../Org_volunteers/index.html" class="active">Volunteers</a>
+      
+        <a href="#" id="logout-btn">Logout</a>
+    </div>
+
+    <div class="logo">
+        <img src="./assets/img/logo.png">
+    </div>
+</section>
+
+<section class="Main_applications">
+    <div class="applications">
+        <h1>APPLICATIONS</h1>
+        <hr class="custom-line">
+    </div>
+
+    <div class="container">
+        <!-- Verified and Denied Counters -->
+        <div class="counters">
+            <div class="counter-box">Verified: <span id="verifiedCount">0</span></div>
+            <div class="counter-box">Denied: <span id="deniedCount">0</span></div>
+        </div>
+
+        <!-- Application List -->
+        <div class="app-container" id="application-list">
+            <!-- Dynamic application rows will be inserted here -->
+        </div>
+        <button id="back-btn" class="btn">Back to Events</button>
+    </div>
+</section>
+
+<section class="right-side">
+    <div class="profile-container">
+        <!-- User Profile Section -->
+        <div class="profile-header">
+            <div class="avatar"></div>
+            <h2 id="applicantName">Name</h2>
+            <p class="status" id="applicantStatus">Pending</p>
+        </div>
+
+        <!-- Information Grid -->
+        <div class="info-grid">
+            <div class="info-item"><p><strong>Location</strong></p></div>
+            <div class="info-item"><p><strong>Email Address</strong></p></div>
+            <div class="info-item"><p><strong>Application date</strong></p></div>
+            <div class="info-item"><p><strong>Skills & Interests</strong></p></div>
+            <div class="info-item"><p><strong>Applied Event</strong></p></div>
+            <div class="info-item"><p><strong>Availability</strong></p></div>
+        </div>
+        
+        <!-- Action Buttons -->
+        <div class="action-buttons">
+            <button class="verify" id="verifyBtn">✔️ Verify</button>
+            <button class="deny" id="denyBtn">❌ Deny</button>
+        </div>
+    </div>
+</section>
+
+<script src="../Org_volunteers/assets/js/script.js"></script>
+</body>
+</html>

@@ -200,5 +200,42 @@ body {
     border-right: 0;
 }
 
+.event-details{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    background-color: rgb(214, 233, 245);
+    padding: 1rem;
+    border-radius: 20px;
+    border-style: solid;
+}
+
+.event-details button{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    background-color: rgb(255, 255, 255);
+    padding: 1rem;
+    border-radius: 20px;
+    border-style: solid;
+    width: 25%;
+}
+
+#label{
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    margin-left: 1rem;
+   
+}
+
+.validation{
+    margin-left: 1rem;
+}
+
 
 

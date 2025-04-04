@@ -1,78 +1,73 @@
-// ✅ Correct API URL
-const API_URL = "https://demo-api-skills.vercel.app/api/VolunteerOrg";
-
-// 🎯 Handle User Registration
-async function registerUser(email, name, password) {
-  try {
-    // ✅ Correct endpoint for registration
-    const response = await fetch(`${API_URL}/users`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ email, name, password }),
-    });
-
-    if (response.status === 201) {
-      const data = await response.json();
-      alert("User registered successfully!");
-      console.log("New User:", data);
-    } else {
-      const error = await response.json();
-      alert(`Error: ${error.error}`);
-    }
-  } catch (error) {
-    console.error("Error registering user:", error);
-  }
-}
-
-// 🎯 Handle User Login (GET to login route with email & password validation)
-async function loginUser(email, passwordInput) {
-  try {
-    // ✅ Corrected API URL for login with GET method
-    const response = await fetch(`${API_URL}/users/login/${email}`, {
-      method: "GET",
-    });
-
-    if (response.status === 200) {
-      const userData = await response.json();
-
-      // ✅ Validate password from API response
-      if (userData.password === passwordInput) {
-        alert(`Welcome back, ${userData.name}!`);
-        console.log("User Data:", userData);
-      } else {
-        alert("Invalid email or password. Please try again.");
-      }
-    } else {
-      alert("User not found. Please register.");
-    }
-  } catch (error) {
-    console.error("Error during login:", error);
-  }
-}
-
-// 🎯 Add Event Listeners for Form Buttons
+// 🎯 Wait for the DOM to Load Properly
 document.addEventListener("DOMContentLoaded", () => {
-  // ✅ Corrected to Target the Correct Button IDs
-  const registerBtn = document.getElementById("signup-btn");
-  const loginBtn = document.getElementById("login-btn");
+  // ✅ API Base URL
+  const API_URL = "https://demo-api-skills.vercel.app/api/VolunteerOrg";
 
-  if (registerBtn) {
-    registerBtn.addEventListener("click", () => {
-      // ✅ Fetching Correct IDs for Inputs
-      const email = document.getElementById("reg-email").value.trim();
-      const name = document.getElementById("reg-name").value.trim();
-      const password = document.getElementById("reg-password").value.trim();
+  // 🎯 Handle User Login
+  async function loginUser(email, password) {
+    try {
+      console.log("🔄 Logging in user:", email);
 
-      // ✅ Basic Validation to Prevent Empty Inputs
-      if (email && name && password) {
-        registerUser(email, name, password);
-      } else {
-        alert("Please fill in all fields.");
+      // ✅ Encode Email to Avoid URL Errors
+      const encodedEmail = encodeURIComponent(email);
+      const response = await fetch(`${API_URL}/users/login/${encodedEmail}`, {
+        method: "GET",
+      });
+
+      if (!response.ok) {
+        if (response.status === 404) {
+          alert("❌ User not found. Please register first.");
+        } else {
+          alert("⚠️ Error during login. Please try again.");
+        }
+        return;
       }
-    });
+
+      const userData = await response.json();
+      console.log("✅ User data retrieved:", userData);
+
+      // 🎯 Validate Password
+      if (userData.password !== password) {
+        alert("❌ Invalid email or password. Please try again.");
+        return;
+      }
+
+      // ✅ Create User Object for Local Storage
+      const userObject = {
+        email: userData.email,
+        name: userData.name,
+        role: userData.role || "user", // Default to "user" if role is missing
+        token: userData.token || "", // Store token if available
+        id: userData.id, // User ID
+      };
+
+      // 🎯 Store User Data in Local Storage
+      localStorage.setItem("user_data", JSON.stringify(userObject));
+
+      // ✅ Role-Based Redirection
+      if (userData.name.startsWith("a-")) { 
+        // 🎯 Admin Case
+        localStorage.setItem("admin_data", JSON.stringify({ ...userObject, role: "admin" }));
+        window.location.href = "../../pages/Admin/Admin_dashboard/index.html";
+      } else if (email.endsWith("@org.com")) {
+        // 🎯 Organizer Case
+        window.location.href = "../../pages/Organizers/Org_dashboard/index.html";
+      } else if (email.endsWith("@user.com")) {
+        // 🎯 Regular User Case
+        window.location.href = "../../pages/User/User-events/index.html";
+      } else {
+        alert("⚠️ Invalid email domain. Please use an appropriate domain.");
+      }
+
+      alert(`🎉 Welcome back, ${userData.name}!`);
+    } catch (error) {
+      console.error("🚨 Error logging in user:", error);
+      alert("❌ An error occurred during login. Please try again.");
+    }
   }
+
+  // 🎯 Handle Login Button Click
+  const loginBtn = document.getElementById("login-btn");
 
   if (loginBtn) {
     loginBtn.addEventListener("click", () => {
@@ -82,19 +77,8 @@ document.addEventListener("DOMContentLoaded", () => {
       if (email && password) {
         loginUser(email, password);
       } else {
-        alert("Please enter your email and password.");
+        alert("⚠️ Please enter your email and password.");
       }
     });
   }
 });
-
-// 🎯 Test API Connection (Optional - For Debugging Purposes)
-fetch(`${API_URL}/users`)
-  .then((response) => {
-    if (!response.ok) {
-      throw new Error("API connection failed");
-    }
-    return response.json();
-  })
-  .then((data) => console.log("API connected successfully:", data))
-  .catch((error) => console.error("Error connecting to API:", error));

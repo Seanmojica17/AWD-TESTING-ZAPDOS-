@@ -173,9 +173,34 @@ input[placeholder] {
     background-color: #00b83d; /* Darker green on hover */
 }
 
+.login-as-text{
+    display: flex;
+    
+}
 
+#login-as-organizer{
+  
+margin-top: 5px;
+margin-left: 5px;
+}
 
+#login-as-volunteer{
+  
+    margin-top: 5px;
+    margin-left: 5px;
+    }
 
+.login-as-container{
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+    gap:3rem;
+
+}
+
+#label{
+    text-align: center;
+}
 
 @media (max-width: 414px) { /* Mobile */
     .header {
