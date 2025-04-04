@@ -284,11 +284,12 @@ h3 {
 }
 
 .container div{
-background-color: rgba(217, 217, 217, 1);
+background-color: rgb(219, 239, 250);
 width: 100%;
 padding: 2rem;
 text-align: left;
 border-radius: 25px;
+border-style: solid;
 }
 
 .container div h3{

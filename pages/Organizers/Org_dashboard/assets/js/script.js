@@ -20,6 +20,8 @@ async function fetchActivities() {
         const response = await fetch('https://demo-api-skills.vercel.app/api/VolunteerOrg/activities');
         const activities = await response.json();
         const container = document.getElementById('activities-container');
+        const counter = document.getElementById('event-count'); // Get the counter element
+
         container.innerHTML = ''; // Clear previous activities
 
         // Loop through activities and display them
@@ -35,10 +37,17 @@ async function fetchActivities() {
             `;
             container.appendChild(div);
         });
+
+        // ✅ Update event counter
+        if (counter) {
+            counter.textContent = activities.length;
+        }
+
     } catch (error) {
         console.error("Error fetching activities:", error);
     }
 }
+
 
 
 document.getElementById('create-event-btn').addEventListener('click', async () => {
