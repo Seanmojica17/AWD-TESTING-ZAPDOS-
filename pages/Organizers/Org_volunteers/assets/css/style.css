@@ -412,3 +412,23 @@ body {
     border-radius: 100px;
 }
 
+#back-btn{
+    margin-top: 2rem;
+    padding: 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: .3s ease;
+
+
+}
+
+#back-btn:hover{
+    background-color:rgba(0, 28, 100, 1) ;
+    color: white;
+    margin-top: 2rem;
+    padding: 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    
+
+}

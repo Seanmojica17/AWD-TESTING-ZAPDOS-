@@ -200,5 +200,48 @@ body {
     border-right: 0;
 }
 
+.event-card{
+    background-color:rgb(217, 224, 243) ;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 20px;
+    border-radius: 25px;
+    font-size: 1rem;
+    border-style: solid ;
+    transition: .2s ease;
+}
 
+
+
+
+.event-card:hover{
+    background-color:rgb(255, 252, 252) ;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 20px;
+    border-radius: 25px;
+    font-size: 1rem;
+    border-style: solid ;
+  
+    
+   
+}
+
+.event-card button{
+    background-color:rgb(255, 255, 255) ;
+
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 10px;
+    border-radius: 25px;
+}
+
+.event-card button:hover{
+    background-color:rgb(205, 216, 247) ;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 10px;
+    border-radius: 25px;
+    transition: .1s ease;
+}
 

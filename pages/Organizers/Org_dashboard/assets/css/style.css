@@ -277,7 +277,9 @@ h3 {
 
 .container{
     display: flex;
+    flex-direction: column;
     width: 100%;
+    margin-top:2rem ;
 
 }
 
@@ -292,5 +294,6 @@ border-radius: 25px;
 .container div h3{
     font-size: 2rem;
     }
+
 
 

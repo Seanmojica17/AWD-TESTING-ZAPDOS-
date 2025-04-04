@@ -412,3 +412,46 @@ body {
     border-radius: 100px;
 }
 
+.user-item{
+    background-color:rgb(217, 224, 243) ;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 20px;
+    border-radius: 25px;
+    font-size: 1rem;
+    border-style: solid ;
+    transition: .2s ease;
+   
+}
+
+
+.user-item:hover{
+    background-color:rgb(255, 252, 252) ;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 20px;
+    border-radius: 25px;
+    font-size: 1rem;
+    border-style: solid ;
+  
+    
+   
+}
+
+.user-item button{
+    background-color:rgb(255, 255, 255) ;
+
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 10px;
+    border-radius: 25px;
+}
+
+.user-item button:hover{
+    background-color:rgb(250, 188, 188) ;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 10px;
+    border-radius: 25px;
+    transition: .1s ease;
+}
