@@ -11,31 +11,28 @@
 <body>
 
 
+<!-- Hamburger Menu Button (for mobile) -->
+<button class="hamburger" id="hamburger">&#9776;</button>
 
-<section class="Main_Nav">
+<!-- Sidebar -->
+<section class="Main_Nav" id="sidebar">
+    <div class="profile">
+        <img src="./assets/img/profile.png">
+        <h1>ADMIN</h1>
+    </div>
 
-<div class="profile">
-    <img src="./assets/img/profile.png" >
-    <h1> ADMIN </h1>
-</div>
+    <div class="navigations">
+        <a href="../Admin_dashboard/index.html">Dashboard</a>
+        <a href="../Admin_events/index.html">Events</a>
+        <a href="../Admin_volunteers/index.html">Volunteers</a>
+        <a href="../Admin_applications/index.html">Applications</a>
+        <a href="../Admin_notifications/index.html" class="active">Notification</a>
+        <a href="#" id="logout-btn">Logout</a>
+    </div>
 
-
-<div class="navigations">
-    <a href="../Admin_dashboard/index.html" >Dashboard</a>
-    <a href="../Admin_events/index.html">Events</a>
-    <a href="../Admin_volunteers/index.html" >Volunteers</a>
-    <a href="../Admin_applications/index.html" >Applications</a>
-    <a href="../Admin_notifications/index.html" class="active"  >Notification</a>
-    <a href="#" id="logout-btn">Logout</a> <!-- 🆕 Logout Button -->
-</div>
-
-<div class="logo">
-    <img src="./assets/img/logo.png" >
-</div>
-
-
-
-
+    <div class="logo">
+        <img src="./assets/img/logo.png">
+    </div>
 </section>
 
 
@@ -125,25 +122,26 @@
                 </div>
             </div>
 
-            <div class="notifs-d">
+
+
+            <div class="notifs-y">
                 <div class="Today">
                 <h1> DATE </h1>
-                <div class=" notif-content-d">
-                <div class="pin">
+                <div class=" notif-content-y">
+                <div class="calendar">
                     <img src="./assets/img/pin.png">
                 </div>
-                <div class="notif-text-d">
+                <div class="notif-text-y">
                     <h1>Event Name</h1>
                     <p>Event Description</p>
                 </div> 
 
-                <div class="notif-button-d">
+                <div class="notif-button-y">
                     <button class="review-btn">Review & Approve</button>
                 </div>
                 </div>
                 </div>
             </div>
-        </div>
 
         </section>
 
