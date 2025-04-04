@@ -5,96 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <link rel="stylesheet" href="./assets/css/style.css">
-
 </head>
 
 <body>
-
-
-
 <section class="Main_Nav">
-
-<div class="profile">
-    <img src="./assets/img/profile.png" >
-    <h1> ADMIN </h1>
-</div>
-
-
-<div class="navigations">
-        <a href="../Admin_dashboard/index.html" >Dashboard</a>
+    <div class="profile">
+        <img src="./assets/img/profile.png" >
+        <h1> Welcome Orgname  </h1>
+    </div>
+    <div class="navigations">
+        <a href="../Admin_dashboard/index.html">Dashboard</a>
         <a href="../Admin_events/index.html">Events</a>
-        <a href="../Admin_volunteers/index.html" class="active" >Volunteers</a>
-        <a href="../Admin_applications/index.html" >Applications</a>
-        <a href="../Admin_notifications/index.html"  >Notification</a>
+        <a href="../Admin_volunteers/index.html"  class="active">Volunteers</a>
+        <a href="../Admin_applications/index.html">Applications</a>
+        <a href="../Admin_notifications/index.html">Notification</a>
         <a href="#" id="logout-btn">Logout</a> <!-- 🆕 Logout Button -->
-</div>
+    </div>
+    <div class="logo">
+        <img src="./assets/img/logo.png">
+    </div>
+</section>
 
-<div class="logo">
-    <img src="./assets/img/logo.png" >
-</div>
+<section class="Main_Notification">
+    <div class="notification">
+        <h1>EVENTS</h1>
+        <hr class="custom-line">
+    </div>
 
+    <div class="tab-container">
+       
+        <div class="tab" id="all-events-tab">ALL EVENTS</div>
+   
+    </div>
 
-
-
+    <div class="event-container" id="event-container">
+        <!-- Events will be dynamically added here -->
+    </div>
 </section>
 
 
 
-
-<section class="Main_Notification">
-
-        <div class="notification">
-            <h1>VOLUNTEERS</h1>
-            <hr class="custom-line">
-        </div>
-
-
-        <div class="container">
-            <div class="card">
-                <img src="./assets/img/card.png" alt="Organization Image">
-                <div class="content">
-                    <h3>ORGANIZATION NAME</h3>
-                    <button class="btn">VIEW TEAMS</button>
-                </div>
-            </div>
-            <div class="card">
-                <img src="./assets/img/card.png" alt="Organization Image">
-                <div class="content">
-                    <h3>ORGANIZATION NAME</h3>
-                    <button class="btn">VIEW TEAMS</button>
-                </div>
-            </div>
-            <div class="card">
-                <img src="./assets/img/card.png" alt="Organization Image">
-                <div class="content">
-                    <h3>ORGANIZATION NAME</h3>
-                    <button class="btn">VIEW TEAMS</button>
-                </div>
-            </div>
-            <div class="card">
-                <img src="./assets/img/card.png" alt="Organization Image">
-                <div class="content">
-                    <h3>ORGANIZATION NAME</h3>
-                    <button class="btn">VIEW TEAMS</button>
-                </div>
-            </div>
-        </div>
-
-        </section>
-
-        <div class="right">
-             <div class="Dashboard-content">
-            <section class="dashboard-stats">
-                <div class="stat-card">
-                    <div class="circle">
-                        <h2>0</h2>
-                    </div>
-                    <p>TOTAL EVENTS</p>
-                </div>
-                </section>
-        </div>
-        </div>
-        
-        <script src="../Admin_volunteers/assets/js/script.js"></script>
-
+    <script src="../Admin_volunteers/assets/js/script.js"></script>
 </body>
+
+</html>
